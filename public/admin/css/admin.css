@@ -1,0 +1,8 @@
+.delete-media
+{
+    display: none;
+}
+
+.single-media-div:hover .delete-media{
+    display: block;
+}

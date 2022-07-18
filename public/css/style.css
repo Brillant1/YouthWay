@@ -1,0 +1,13 @@
+ul>li>a{
+    font-size: 17px;
+    font-weight: bold;
+}
+#navbarSupportedContent>ul{
+    width: 55%;
+}
+.contaire-partenaire{
+    padding: 40px;
+}
+body{
+    box-sizing: border-box;
+}
