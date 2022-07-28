@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>YOUTH WAY </title>
-    <script src="{{ asset("adminspace/js/jquery.min.js") }}"></script>
+    <script src="{{ asset('admin/js/jquery.min.js') }}"></script>
     @include('admin.layouts.css')
 </head>
 <body>

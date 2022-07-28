@@ -1,3 +1,94 @@
+@charset "UTF-8";
+
+:root {
+    --r-orange: #ff8000;
+    --r-green: #178b01;
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../fonts/Montserrat-Bold.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat-Light.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat-Medium.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../fonts/Montserrat-Regular.ttf");
+    display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("../fonts/Montserrat-SemiBold.ttf");
+    display: swap;
+}
+
+@import url('http://fonts.cdnfonts.com/css/work-sans');
+
+body {
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.font-regular {
+    font-family: "Montserrat-Regular";
+}
+
+.font-medium {
+    font-family: "Montserrat-Medium";
+}
+
+.font-light {
+    font-family: "Montserrat-Light";
+}
+
+.font-bold {
+    font-family: "Montserrat-Bold";
+}
+
+.font-semibold {
+    font-family: "Montserrat-SemiBold";
+}
+
+.rosette-text-orange {
+    color: #ff8000 !important;
+}
+
+.rosette-text-green {
+    color: #178b01;
+}
+
+.rosette-text-blue {
+    color: #178bff;
+}
+
+.rosette-bg-green {
+    background-color: #178b01;
+}
+
+.rosette-bg-orange {
+    background-color: #ff8000;
+}
+
 ul>li>a{
     font-size: 17px;
     font-weight: bold;
@@ -10,4 +101,123 @@ ul>li>a{
 }
 body{
     box-sizing: border-box;
+}
+
+
+/* contact style code  */
+textarea {
+    height: 150px;
+    outline: 0;
+}
+
+input[type="text"],
+input[type="mail"],
+input[type="phone"] {
+    height: 50px;
+    margin-top: 5px;
+}
+
+.localisation {
+    background-color: rgb(240, 240, 240);
+}
+.icon-reseau{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* Historique page style code */
+
+.historique-img-container{
+    background-image: url('../images/together1.png');
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
+}
+.activite-domaine-img-container{
+    background-image: url('../images/together2.jpeg');
+    background-repeat: repeat;
+    background-size: contain;
+    width: 100%;
+}
+.historique-img-container-parent, .historique-img-container{
+    height: 300px;
+}
+.historique-container{
+    z-index: 99 ;
+    position: absolute;
+    top: 0px;
+    width: 100% ;
+    height: 300px;
+    background: rgba(83, 119, 104, 0.71);
+}
+.img-presentation-container{
+    background-color: antiquewhite;
+    height: 400px;
+    width: 400px;
+    background-image: url('../images/patou.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    /* box-shadow: 0px 0 2px 2px rgba(0, 0, 0, 0.2); */
+}
+.text-presentation-promotteur{
+    width: 91%;
+    text-align: justify;
+    line-height: 30px;
+    font-size: 1.2rem;
+
+}
+.titre-presentation-promotteur{
+    border-bottom: 4px solid #178b01;
+    width: 86%;
+}
+.naissance-youthway-text{
+    border-bottom: 4px solid #178b01;
+    width: 47%;
+}
+.p-historique{
+    text-align: justify;
+    line-height: 30px;
+    font-size: 1.1rem;
+}
+.titre-mission{
+    border-bottom: 4px solid #178b01;
+    width: 25.5%;
+}
+
+/* Activity page style code */
+
+.container-activty-category{
+    width: 90%;
+}
+.title-activity{
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+}
+.title-activity-content{
+    text-align: justify;
+}
+.card-container-activity .card{
+    border: none;
+    box-shadow: 0px 0 1px 1px rgb(226, 225, 225);
+    padding: 5px;
+}
+
+.card-container-activity .card img{
+    height: 300px;
+    object-fit: cover;
+
+}
+
+
+.category-nav>ul{
+    margin-left: 6%;
+    width: 30%;
+
+}
+.text-intervention{
+    font-size: 1.1rem;
+    line-height: 25px;
 }

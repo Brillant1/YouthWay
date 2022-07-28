@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\DomaineController;
+use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ActiviteController;
+use App\Http\Controllers\Admin\ActualiteController;
+use App\Http\Controllers\Admin\FlashInfoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,17 +20,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::resource('activites', ActiviteController::class);
+Route::resource('actualites', ActualiteController::class);
+Route::resource('flashInfos', FlashInfoController::class);
+Route::resource('domaines', DomaineController::class);
+Route::resource('medias', MediaController::class);
+Route::resource('partenaires', PartnerController::class);
+
 
 Route::get('home', function(){
     return view('admin.home');
 })->name('home');
 
-Route::get('activite', function(){
-    return view('admin.activites.listActivite');
-})->name('activite');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,12 +42,29 @@ Route::get('/dashboard', function () {
 
 Route::get('contact', function(){
     return view('contact');
-});
-Route::get('header', function(){
-    return view('partials.header');
-})->name('header');
-Route::get('template', function(){
-    return view('partials.template');
-})->name('template');
+})->name('contact');
+
+Route::get('historique', function(){
+    return view('historique');
+})->name('historique');
+
+Route::get('actualite', function(){
+    return view('actualite');
+})->name('actualite');
+
+
+
+
+Route::get('/', function(){
+    return view('accueil');
+})->name('accueil');
+
+Route::get('activites', function(){
+    return view('activite');
+})->name('activites');
+
+Route::get('activite/domaine', function(){
+    return view('activiteDomaine');
+})->name('activite-domaine');
 
 require __DIR__.'/auth.php';

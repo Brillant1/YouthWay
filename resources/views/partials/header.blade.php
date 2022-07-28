@@ -1,6 +1,6 @@
 <header class="" style="">
     <div class="fw-bold text-white row bg-dark" id="flash">
-        <div class="bg-primary col-1 py-2 d-flex justify-content-center align-items-center text-uppercase fs-5">
+        <div class="rosette-bg-green col-1 py-2 d-flex justify-content-center align-items-center text-uppercase fs-5">
             Flash Info</div>
         <div class="bg-dark col-11 py-2  fs-5 d-flex justify-content-center align-items-center text-uppercase">
             <marquee behavior="" direction="">
@@ -23,18 +23,32 @@
                         <a class="nav-link active" aria-current="page" href="#">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Historique</a>
+                        <a class="nav-link" href="{{ route('historique') }}">Historique</a>
+                    </li>
+
+                    <li class="nav-item dropdown dropdown-etablissement li-web-only">
+                        <a class="nav-link dropdown-toggle  py-4"
+                            href="{{ route('activites') }}" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">
+                            Activités
+                        </a>
+                        <ul class="dropdown-menu p-0 rounded-0 dropdown-link-etablissement"
+                            aria-labelledby="navbarScrollingDropdown">
+                            <li class="nav-li-rose"><a class="dropdown-item p-3"
+                                    href="{{ route('activites') }}">Nos activités</a></li>
+                            <li class="nav-li-rose"><a class="dropdown-item p-3"
+                                    href="{{ route('activite-domaine') }}">Domaines d'intervention</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('actualite') }}">Actualités</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Activités</a>
+                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Actualités</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item bg-primary px-3">
+                    <li class="nav-item rosette-bg-green px-3">
                         <a href="" class="nav-link text-white fw-bold contaire-partenaire fs-6">
                             Devenir partenaire &nbsp; <i>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
