@@ -11,6 +11,7 @@
 <script src="{{ asset("admin/js/lightbox-plus-jquery.js") }}"></script>
 <script src="{{ asset('admin/js/yearpicker.js') }}"></script>
 <script src="{{ asset('admin/ckeditor5/ckeditor.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.magnific-popup.js') }}"></script>
 {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script> --}}
 
 

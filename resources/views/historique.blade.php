@@ -18,7 +18,7 @@
 <div class="container-fluid mt-5">
     <div class="container d-flex justify-content-between align-items-center mt-5">
         <div class="mt-5">
-            
+
             <div class="img-presentation-container shadowd">
 
             </div>
@@ -32,7 +32,7 @@
                 malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Nulla
                 porttitor accumsan
                 tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-            <a href="#" class="btn btn-success rounded-pill p-2 px-4 mt-2">Savoir plus sur moi</a>
+            <a href="#" class="btn rosette-bg-orange text-white fw-bold rounded-pill p-2 px-4 mt-2">Savoir plus sur moi</a>
         </div>
     </div>
 </div>

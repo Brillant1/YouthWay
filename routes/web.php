@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\ContactMailController;
+use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\Admin\DomaineController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ActiviteController;
 use App\Http\Controllers\Admin\ActualiteController;
 use App\Http\Controllers\Admin\FlashInfoController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,18 @@ Route::resource('medias', MediaController::class);
 Route::resource('partenaires', PartnerController::class);
 
 
+Route::get('actualite', [GuestController::class, 'displayAllActualites'])->name('actualite');
+Route::get('domaine', [GuestController::class, 'getAllDomaines'])->name('domaine');
+Route::get('activite', [GuestController::class, 'getAllActivites'])->name('activite');
+
+Route::get('actualite/detail/{id}', [GuestController::class, 'showActualiteDetail'])->name('actualite-detail');
+
+
+Route::get('contact', [ContactMailController::class, 'create'])->name('contact');
+Route::post('contact', [ContactMailController::class, 'store'])->name('contact-stroe');
+
+Route::get('accueil', [GuestController::class,'showHomePage'])->name('accueil');
+
 Route::get('home', function(){
     return view('admin.home');
 })->name('home');
@@ -40,31 +53,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('contact', function(){
-    return view('contact');
-})->name('contact');
 
 Route::get('historique', function(){
     return view('historique');
 })->name('historique');
 
-Route::get('actualite', function(){
-    return view('actualite');
-})->name('actualite');
 
 
 
-
-Route::get('/', function(){
-    return view('accueil');
-})->name('accueil');
-
-Route::get('activites', function(){
-    return view('activite');
-})->name('activites');
-
-Route::get('activite/domaine', function(){
-    return view('activiteDomaine');
-})->name('activite-domaine');
 
 require __DIR__.'/auth.php';

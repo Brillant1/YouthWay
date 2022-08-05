@@ -8,14 +8,14 @@
             <div class="row page-titles mx-0">
                 <div class="col-sm-6 p-md-0">
                     <div class="welcome-text">
-                        <h4>Liste des activités</h4>
+                        <h4>Liste des actualités</h4>
                     </div>
                 </div>
                 <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Dashbord</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0);">Activités</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0);">Liste des activités</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0);">Actualités</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0);">Liste des actualités</a></li>
                     </ol>
                 </div>
             </div>
@@ -24,15 +24,15 @@
                 <div class="col-lg-12">
                     <div class="row tab-content">
                         <div id="list-view" class="tab-pane fade active show col-lg-12">
-                            @if (session('updateActiviteMessage'))
+                            @if (session('updateActualiteMessage'))
                                 <div class="alert alert-success">
-                                    <span>{{ session('updateActiviteMessage') }}</span>
+                                    <span>{{ session('updateActualiteMessage') }}</span>
                                 </div>
                             @endif
 
-                            @if (session('deleteActiviteMesage'))
+                            @if (session('deleteActualiteMesage'))
                                 <div class="alert alert-success py-3">
-                                    <span>{{ session('deleteActiviteMesage') }}</span>
+                                    <span>{{ session('deleteActualiteMesage') }}</span>
                                 </div>
                                 @endif @if (session('changeStateMessage'))
                                     <div class="alert alert-success py-3">
@@ -42,8 +42,8 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4 class="card-title">Liste des activités </h4>
-                                        <a href="{{ route('activites.create') }}" class="btn btn-primary">
+                                        <h4 class="card-title">Liste des actualités </h4>
+                                        <a href="{{ route('actualites.create') }}" class="btn btn-primary">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                                 fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                                                 <path
@@ -59,10 +59,9 @@
                                                         <th>Photo</th>
                                                         <th>Dte debut</th>
                                                         <th>Dte fin</th>
-
-
+                                                        <th>Coût</th>
+                                                        <th>Statut</th>
                                                         <th>Intitulé</th>
-                                                        <th>Description</th>
                                                         <th>Action</th>
 
                                                     </tr>
@@ -70,17 +69,17 @@
 
                                                 <tbody>
 
-                                                    @if (sizeof($activites) > 0)
-                                                        @foreach ($activites as $activite)
+                                                    @if (sizeof($actualites) > 0)
+                                                        @foreach ($actualites as $actualite)
                                                             <tr>
-                                                                <td><img src="{{ asset('storage/' . $activite->photo) }}"
+                                                                <td><img src="{{ asset('storage/' . $actualite->photo) }}"
                                                                         alt="" width="60" height="60"></td>
-                                                                <td>{{ $activite->date_debut }}</td>
-                                                                <td>{{ $activite->date_fin }}</td>
+                                                                <td>{{ $actualite->date_debut }}</td>
+                                                                <td>{{ $actualite->date_fin }}</td>
+                                                                <td>{{ $actualite->cout }}</td>
+                                                                <td>{{ $actualite->statut }}</td>
+                                                                <td>{{ $actualite->titre }}</td>
 
-
-                                                                <td>{{ $activite->titre }}</td>
-                                                                 <td>{!! Str::substr($activite->description, 0, 100).'...' !!}</td>
 
                                                                 <td class="d-flex align-items-center justify-content-start">
 
@@ -100,7 +99,7 @@
                                                                         </svg>
                                                                     </a> --}}
 
-                                                                    {{-- <a href="" title=" Changer statut"
+                                                                    <a href="" title=" Changer statut"
                                                                         class="text-primary fw-bold btn btn-sm status-article"
                                                                         data-toggle="modal"
                                                                         data-target="{{ '#statusModalActivite' . $actualite->id }}">
@@ -127,9 +126,9 @@
                                                                             </svg>
                                                                         @endif
 
-                                                                    </a> --}}
+                                                                    </a>
 
-                                                                    <a href="{{ route('activites.edit', $activite) }}"
+                                                                    <a href="{{ route('actualites.edit', $actualite) }}"
                                                                         class="btn btn-sm text-success" title="Editer">
                                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                                             width="20" height="20" fill="green"
@@ -142,7 +141,7 @@
 
                                                                     <a href="" title="Supprimer"
                                                                         class="btn btn-sm text-danger" data-toggle="modal"
-                                                                        data-target="{{ '#deleteModalActivite' . $activite->id }}">
+                                                                        data-target="{{ '#deleteModalActualite' . $actualite->id }}">
                                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                                             width="30" height="30" fill="red"
                                                                             class="bi bi-x" viewBox="0 0 16 16">
@@ -154,7 +153,7 @@
 
                                                                     <!-- Modal Confirm suppresion -->
                                                                     <div class="modal fade"
-                                                                        id="{{ 'deleteModalActivite' . $activite->id }}"
+                                                                        id="{{ 'deleteModalActualite' . $actualite->id }}"
                                                                         tabindex="-1" role="dialog" aria-hidden="true">
                                                                         <div class="modal-dialog modal-dialog-centered"
                                                                             role="document">
@@ -172,13 +171,13 @@
 
                                                                                 <div class="modal-body">
                                                                                     Voulez-vous vraiment supprimer cette
-                                                                                    activité ?
+                                                                                    actualité ?
 
                                                                                 </div>
 
                                                                                 <div class="modal-footer">
                                                                                     <form method="POST"
-                                                                                        action="{{ route('activites.destroy', ['activite' => $activite->id]) }}">
+                                                                                        action="{{ route('actualites.destroy', ['actualite' => $actualite->id]) }}">
                                                                                         <input type="hidden"
                                                                                             name="_method" value="DELETE">
                                                                                         <input type="hidden"
@@ -197,11 +196,11 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    {{-- end delete activite confirm modal --}}
+                                                                    {{-- end show resultat confirm modal --}}
 
 
                                                                     <!-- Modal Confirm status -->
-                                                                    {{-- <div class="modal fade"
+                                                                    <div class="modal fade"
                                                                         id="{{ 'statusModalActivite' . $actualite->id }}"
                                                                         tabindex="-1" role="dialog" aria-hidden="true">
                                                                         <div class="modal-dialog modal-dialog-centered"
@@ -236,7 +235,7 @@
 
                                                                             </div>
                                                                         </div>
-                                                                    </div> --}}
+                                                                    </div>
 
 
 

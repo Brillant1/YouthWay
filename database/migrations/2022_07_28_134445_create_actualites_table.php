@@ -15,12 +15,15 @@ return new class extends Migration
     {
         Schema::create('actualites', function (Blueprint $table) {
             $table->id();
-            // $table->mediumText('titre');
-            // $table->longText('description');
-            // $table->date('date_debut');
-            // $table->date('date_fin');
-            // $table->string('photo');
-            // $table->foreignId('domaine_id')->constrained();
+            $table->mediumText('titre');
+            $table->longText('description');
+            $table->date('date_debut');
+            $table->date('date_fin');
+            $table->string('photo');
+            $table->string('cout');
+            $table->string('statut');
+            $table->string('zone_intervention');
+            $table->foreignId('domaine_id')->constrained();
             $table->timestamps();
         });
     }

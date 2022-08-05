@@ -23,7 +23,7 @@
     <div id="main-wrapper">
 
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="{{ route('accueil') }}" class="brand-logo">
                 <img class="logo-abbr" src="{{ asset('images/youth.jpg') }}" alt="" style="width: 100%; height:100%;">
             </a>
 

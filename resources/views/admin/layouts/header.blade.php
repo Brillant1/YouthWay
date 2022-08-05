@@ -81,7 +81,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown header-profile">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                        <a class="nav-link" href="" role="button" data-toggle="dropdown">
                             <img src="{{ asset('images/profile/education/pic1.jpg') }}" width="20" alt="">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">

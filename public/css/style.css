@@ -89,6 +89,12 @@ body {
     background-color: #ff8000;
 }
 
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: var(--r-green);
+    font-weight: bold;
+}
+
 ul>li>a{
     font-size: 17px;
     font-weight: bold;
@@ -220,4 +226,201 @@ input[type="phone"] {
 .text-intervention{
     font-size: 1.1rem;
     line-height: 25px;
+}
+
+
+
+
+/* Historique style code */
+.h1-rosette-presentation {
+    font-size: 48px;
+}
+.lien-historique {
+    background-color: #178b01;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin: 0.5rem 0rem;
+    display: inline-block;
+}
+
+.lien-historique:hover {
+    color: white;
+}
+
+
+.presentation-title h1 span {
+    height: 8px;
+    width: 100px;
+    background-color: #ff8000;
+    display: inline-block;
+}
+.video-back {
+    background-color: #ff8000;
+    border-radius: 20px;
+    position: relative;
+    width: 95%;
+    height: 100%;
+    margin: 0px auto;
+}
+.presentation-scolaire{
+    height: 400px;
+
+}
+
+
+
+.video-iframe {
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 20px;
+    margin: 0px auto;
+    background-color: #178b01;
+    top: 20px;
+    right: 20px;
+}
+
+.basic-2 .video-play-button {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    display: block;
+    box-sizing: content-box;
+    width: 2rem;
+    height: 2.75rem;
+    padding: 1.125rem 1.25rem 1.125rem 1.75rem;
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.basic-2 .video-play-button:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 4.75rem;
+    height: 4.75rem;
+    border-radius: 50%;
+    background: #178b01;
+    animation: pulse-border 1500ms ease-out infinite;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.basic-2 .video-play-button:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    background: #178b01;
+    transition: all 200ms;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.basic-2 .video-play-button span {
+    position: relative;
+    display: block;
+    z-index: 3;
+    top: 0.375rem;
+    left: 0.25rem;
+    width: 0;
+    height: 0;
+    border-left: 1.625rem solid #fff;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+}
+
+
+
+
+.atouts-title h1 {
+    font-size: 30px;
+}
+
+.atouts-title h1 span {
+
+        height: 8px;
+        width: 100px;
+        background-color: #ff8000;
+        display: inline-block;
+
+}
+
+.h3-rosette-presentation{
+    font-weight: bold;
+}
+
+.atout-item .card {
+    border-radius: 0px 12px 0px 12px;
+    border: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Home page style code */
+a {
+    text-decoration: none;
+}
+
+.actualite-item a.lien-article:hover {
+    text-decoration: none;
+    color: #ff8000;
+}
+
+.actualites a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.rejoignez-nous-content a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.actualite-item .card img {
+    height: 250px;
+    position: relative;
+    object-fit: cover;
+    border-radius: 0px 12px 0px 0px;
+}
+.actualite-date {
+    position: absolute;
+    z-index: 100;
+    right: 0px;
+    width: 55px;
+    height: 55px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0px 12px 0px 0px;
+    font-size: 12px;
+}
+.actualite-item .card {
+    border-radius: 0px 12px 0px 12px;
+
+}
+.actualites-title h1 span {
+
+    height: 8px;
+    width: 100px;
+    background-color: #ff8000;
+    display: inline-block;
+
 }

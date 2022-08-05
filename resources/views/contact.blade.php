@@ -22,7 +22,7 @@
     @endif
     <div class="container-fluid mt-5 ">
         <div class="container">
-            <form action="#" method="POST">
+            <form action="{{ route('contact-stroe') }}" method="POST">
                 @csrf
                 <div class="row mt-3">
                     <div class="col-12 col-lg-6 col-sm-12 col-md-6 px-3">

@@ -8,17 +8,17 @@
                 </a>
             </li>
             <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                <a class="has-arrow" href="{{ route('activites.index') }}" aria-expanded="false">
                     <i class="la la-user"></i>
                     <span class="nav-text">Activités</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="all-professors.html">Les activités</a></li>
-                    <li><a href="add-professor.html">Ajouter activité</a></li>
+                    <li><a href="{{ route('activites.index') }}">Les activités</a></li>
+                    <li><a href="{{ route('activites.create') }}">Ajouter activité</a></li>
                 </ul>
             </li>
             <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                <a class="has-arrow" href="{{ route('domaines.index') }}" aria-expanded="false">
                     <i class="la la-users"></i>
                     <span class="nav-text">Domaines</span>
                 </a>
@@ -28,13 +28,13 @@
                 </ul>
             </li>
             <li>
-                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                <a class="has-arrow" href="{{ route('actualites.index') }}" aria-expanded="false">
                     <i class="la la-graduation-cap"></i>
                     <span class="nav-text">Actualités</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="all-courses.html">Les actualités</a></li>
-                    <li><a href="add-courses.html">Ajouter actualité</a></li>
+                    <li><a href="{{ route('actualites.index') }}">Les actualités</a></li>
+                    <li><a href="{{ route('actualites.create') }}">Ajouter actualité</a></li>
                 </ul>
             </li>
             <li>

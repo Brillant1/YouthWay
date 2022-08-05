@@ -17,17 +17,12 @@ return new class extends Migration
             $table->id();
             $table->mediumText('titre');
             $table->longText('description');
-            $table->date('date_deroulement');
+            $table->date('date_debut');
+            $table->date('date_fin');
             $table->string('photo');
-            $table->string('niveau');
-            $table->string('type_activite');
+           
             $table->foreignId('domaine_id')->constrained()->onDelete('cascade');
-            $table->foreignId('partner_id')->constrained()->onDelete('cascade');
-            //$table->unsignedBigInteger('partenaire_id')->nullable();
-            //$table->unsignedBigInteger('domaine')->nullable();
-
-            //$table->foreign('partenaire_id')->references('id')->on('partenaires')->onDelete('cascade');
-            //$table->foreign('domaine_id')->references('id')->on('domaines')->onDelete('cascade');
+            //$table->foreignId('partner_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

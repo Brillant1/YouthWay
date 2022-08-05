@@ -100,6 +100,7 @@
                         </svg>
                     </a>
                 </div>
+                <a href="" class="mt-5 rosette-bg-orange rounded-pill text-white px-5 fs-5 py-1">MEDIATHEQUE</a>
             </div>
 
             <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4  d-flex  flex-column">

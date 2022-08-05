@@ -8,8 +8,7 @@
             </marquee>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light shadow p-0 ">
-
+    <nav class="navbar navbar-expand-lg navbar-light shadow p-0 " id="navbar">
             <a class="navbar-brand ms-5 my-0" href="#">
                 <img class="logo-abbr" src="{{ asset('images/youth2.png') }}" alt="" style="width:220px;">
             </a>
@@ -20,33 +19,34 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-between align-items-center w-75">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                        <a class="nav-link {{ Route::is('accueil') ? 'active' : ' ' }} " aria-current="page" href="{{ route('accueil') }}" >Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('historique') }}">Historique</a>
+                        <a class="nav-link {{ Route::is('historique') ? 'active' : ' ' }}" href="{{ route('historique') }}">Historique</a>
                     </li>
 
+
                     <li class="nav-item dropdown dropdown-etablissement li-web-only">
-                        <a class="nav-link dropdown-toggle  py-4"
-                            href="{{ route('activites') }}" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle  py-4 {{ Route::is(['activite','domaine']) ? 'active' : ' ' }}"
+                            href="{{ route('activite') }}" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="true">
                             Activités
                         </a>
                         <ul class="dropdown-menu p-0 rounded-0 dropdown-link-etablissement"
                             aria-labelledby="navbarScrollingDropdown">
                             <li class="nav-li-rose"><a class="dropdown-item p-3"
-                                    href="{{ route('activites') }}">Nos activités</a></li>
+                                    href="{{ route('activite') }} {{ Route::is('activite') ? 'active' : ' ' }}"  >Nos activités</a></li>
                             <li class="nav-li-rose"><a class="dropdown-item p-3"
-                                    href="{{ route('activite-domaine') }}">Domaines d'intervention</a></li>
+                                    href="{{ route('domaine') }}  {{ Route::is('domaine') ? 'active' : ' ' }} ">Domaines d'intervention</a></li>
                         </ul>
                     </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('actualite') }}">Actualités</a>
+                        <a class="nav-link {{ Route::is('actualite') ? 'active' : ' ' }}" href="{{ route('actualite') }}"  >Actualités</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                        <a class="nav-link  {{ Route::is('contact') ? 'active' : ' ' }}" href="{{ route('contact') }}" >Contact</a>
                     </li>
                     <li class="nav-item rosette-bg-green px-3">
                         <a href="" class="nav-link text-white fw-bold contaire-partenaire fs-6">
@@ -63,4 +63,22 @@
             </div>
 
     </nav>
+
+    <script>
+        window.addEventListener('scroll', myFunction);
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("fixed-top")
+                navbar.classList.add("shadow")
+                navbar.classList.add("bg-white")
+            } else {
+                navbar.classList.remove("fixed-top");
+            }
+        }
+
+    </script>
 </header>

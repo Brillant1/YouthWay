@@ -39,12 +39,17 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
+
+      
         if($request->hasfile('photo'))
         {
 
 
            foreach($request->file('photo') as $image)
            {
+
+
+
             $filename = Storage::disk('public')->put('medias_images', $image);
 
             $media = [
