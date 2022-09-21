@@ -40,25 +40,23 @@ class ActiviteController extends Controller
      */
     public function store(Request $request)
     {
+
         $activite = new Activite();
 
 
-
-        //$filename = Storage::disk('public')->put('photo_activites', $request->photo);
+        $filename = Storage::disk('public')->put('photo_activites', $request->photo);
         $activite->titre = $request->titre;
         $activite->description = $request->description;
         $activite->date_debut = $request->date_debut;
         $activite->date_fin = $request->date_fin;
+        $activite->photo = $filename;
         //$activite->zone_intervention = $request->zone_intervention;
         $activite->domaine_id = $request->domaine_id;
+        $activite->save();
 
-        if($request->hasFile('photo')){
-            foreach($request->file('photo') as $image){
-                $filename = Storage::disk('public')->put('photo_activites', $image);
-                $activite->photo = $filename;
-                $activite->save();
-            }
-        }
+
+
+
 
 
 

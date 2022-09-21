@@ -88,6 +88,9 @@ body {
 .rosette-bg-orange {
     background-color: #ff8000;
 }
+.bg-favorite-color{
+    background-color:#032497F5 ;
+}
 
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show>.nav-link {
@@ -132,6 +135,29 @@ input[type="phone"] {
     border-radius: 50%;
 }
 
+#container-form-contact{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#container-form-contact>form{
+    width: 80%;
+}
+
+@media screen and (max-width:990px) {
+    #container-form-contact>form{
+        width: 95%;
+    }
+    .icon-reseau{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+
+}
+
+
+
 /* Historique page style code */
 
 .historique-img-container{
@@ -165,9 +191,12 @@ input[type="phone"] {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
-    /* box-shadow: 0px 0 2px 2px rgba(0, 0, 0, 0.2); */
 }
+/* .presentation-container{
+    width: 75%;
+} */
 .text-presentation-promotteur{
+
     width: 91%;
     text-align: justify;
     line-height: 30px;
@@ -191,6 +220,7 @@ input[type="phone"] {
     border-bottom: 4px solid #178b01;
     width: 25.5%;
 }
+
 
 /* Activity page style code */
 
@@ -235,8 +265,9 @@ input[type="phone"] {
 .h1-rosette-presentation {
     font-size: 48px;
 }
+
 .lien-historique {
-    background-color: #178b01;
+    background-color: #032497F5;
     color: white;
     border-radius: 25px;
     padding: 0.5rem 1rem;
@@ -253,11 +284,14 @@ input[type="phone"] {
 .presentation-title h1 span {
     height: 8px;
     width: 100px;
-    background-color: #ff8000;
+    background-color: #178b01;
     display: inline-block;
 }
+.rosette-bg-blue-pure{
+    background: #032497F5;
+}
 .video-back {
-    background-color: #ff8000;
+    background-color: #032497F5;
     border-radius: 20px;
     position: relative;
     width: 95%;
@@ -266,7 +300,12 @@ input[type="phone"] {
 }
 .presentation-scolaire{
     height: 400px;
+}
 
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -345,9 +384,149 @@ input[type="phone"] {
     border-top: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
 }
+/* @media screen  and (max-width:1140px) {
 
+    .presentation-container{
+        width: 90%;
+    }
+}
 
+@media screen  and (max-width:990px) {
+    .presentation-container{
+        width: 90%;
+    }
+}
 
+@media screen  and (max-width:955px) {
+    .presentation-container{
+        width: 95%;
+    }
+} */
+
+/* @media screen  and (max-width:720px) {
+    .presentation-container{
+        flex-direction: column;
+    }
+} */
+@media screen  and (max-width:768px) {
+
+    .actualite-container-title {
+        /* border: 1px solid red; */
+        font-size: 25px;
+    }
+
+    .context-presentation {
+        width: 100%;
+        position: relative;
+        /* border: 1px solid red; */
+    }
+
+    .context-presentation-content {
+        text-align: start;
+        width: 100%;
+    }
+
+    .context-video {
+        height: 250px;
+        margin: 2rem 0rem;
+    }
+
+    .presentation-scolaire {
+        /* border: 1px solid blue; */
+        height: auto;
+        margin: 2rem 0rem;
+        width: 100%;
+    }
+
+    .presentation-title h1 {
+        font-size: 30px;
+    }
+
+    .presentation-title h1 span {
+        height: 6px;
+    }
+
+    .atouts {
+        /* border: 1px solid red; */
+        margin: 0px auto;
+        width: 95%;
+        position: relative;
+        height: auto;
+    }
+
+    .atouts-title h1 {
+        font-size: 30px;
+    }
+
+    .atouts-title h1 span {
+        height: 6px;
+    }
+
+    .atout-item {
+        width: 100% !important;
+        /* border: 1px solid blue; */
+        margin: 1rem 0rem;
+        padding: 0px;
+    }
+
+    .atout-item .card-body h3 {
+        font-size: 25px;
+    }
+
+    .atout-item .card-body p {
+        font-size: 12px;
+        /* font-weight: 600; */
+    }
+
+    .atout-item .card {
+        width: 100%;
+        position: relative;
+    }
+
+    .atout-item-container {
+        padding: 0px;
+    }
+
+    .actualites {
+        margin: 0px auto;
+        width: 95%;
+        position: relative;
+        height: auto;
+    }
+
+    .actualites-title h1 {
+        font-size: 30px;
+    }
+
+    .actualites-title h1 span {
+        height: 6px;
+    }
+
+    .actualite-item {
+        width: 100% !important;
+        margin: 1rem 0rem;
+        padding: 0px;
+    }
+
+    .actualite-item .card-body h3 {
+        font-size: 25px;
+    }
+
+    .actualite-item .card-body p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .actualite-item .card {
+        width: 100%;
+        position: relative;
+    }
+
+    .actualite-item-container {
+        padding: 0px;
+    }
+
+}
 
 .atouts-title h1 {
     font-size: 30px;
@@ -355,10 +534,10 @@ input[type="phone"] {
 
 .atouts-title h1 span {
 
-        height: 8px;
-        width: 100px;
-        background-color: #ff8000;
-        display: inline-block;
+    height: 8px;
+    width: 100px;
+    background-color: #178b01;
+    display: inline-block;
 
 }
 
@@ -417,10 +596,500 @@ a {
 
 }
 .actualites-title h1 span {
-
     height: 8px;
     width: 100px;
-    background-color: #ff8000;
+    background-color: #178b01;
     display: inline-block;
+}
+
+.div-youthway-text>div>p:first-child{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+.div-youthway-text>div>p:first-child>span{
+    font-size:70px;
+    font-weight: 700;
+}
+#p-particulier{
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+
+.call-to-discover-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
 
 }
+#carousel-firstbanner-hp, #carousel-firstbanner-hp>.carousel-item{
+    height: 100%;
+}
+
+.div-youthway-text{
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    width: 100% ;
+    height: 100%;
+    background: rgba(3, 36, 151, 0.41);
+}
+
+.div-first-banniere{
+    width: 100%;
+    height: 30%;
+}
+
+.call-to-discover-button{
+    width: 250px;
+}
+
+.text-youthway{
+    margin-left: 10%;
+    margin-top: -5vh;
+}
+
+@media screen and (max-width:1185px) {
+
+    .div-first-banniere>p:first-child{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 60px;
+        margin-right:330px;
+
+    }
+
+    .div-first-banniere>p:first-child>span{
+        font-size:50px;
+        font-weight: 700;
+    }
+    .div-first-banniere>p:last-child{
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 35px;
+        line-height: 60px;
+
+    }
+    .call-to-discover-button{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 990px) {
+
+    .div-youthway-text>div>p:first-child>span{
+        font-size:50px;
+        font-weight: 600;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    #p-particulier{
+        font-size: 25px;
+        line-height: 40px;
+    }
+
+    .text-youthway{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0vh;
+        height: 50%;
+    }
+
+
+    #promottuer-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .naissance-youthway-text, .titre-mission, .titre-presentation-promotteur{
+        font-size: 1.4rem;
+    }
+
+    .img-presentation-container{
+        background-color: antiquewhite;
+        height: 350px;
+        width: 500px;
+        background-image: url('../images/patou.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+    }
+
+    .historique-container{
+        height: 250px;
+    }
+    .historique-img-container-parent, .historique-img-container{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .div-youthway-text>div>p:first-child>span{
+        font-size:30px;
+        font-weight: 600;
+    }
+    #p-particulier{
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 0;
+    }
+
+    .text-youthway{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5vh;
+        height: 50%;
+    }
+
+    .call-to-discover-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+    .carousel-indicators{
+        display: none;
+    }
+
+}
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+
+}
+@media screen and (max-width:780px) {
+    .footer-pipe-web{
+        display: none;
+    }
+    .footer-bottom{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:570px) {
+    .div-first-banniere>p:first-child{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 60px;
+        margin-right:330px;
+        margin-bottom: 30px;
+    }
+
+    .div-first-banniere>p:first-child>span{
+        font-size:40px;
+        font-weight: 500;
+    }
+    .div-first-banniere>p:last-child{
+
+        font-size: 30px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+    .call-to-discover-button{
+        padding-left: 15px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .img-presentation-container{
+        height: 300px;
+        width: 390px;
+    }
+    .text-presentation-promotteur{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .logo-abbr{
+        width:150px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .img-presentation-container{
+        height: 300px;
+        width: 320px;
+    }
+    .text-presentation-promotteur{
+        width: 100%;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:425px) {
+    .text-presentation-promotteur{
+        width: 100%;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    .div-youthway-text>div>p:first-child>span{
+        font-size:25px;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+    }
+    #p-particulier{
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 0;
+    }
+    .text-youthway{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5vh;
+        height: 50%;
+    }
+
+
+
+#carousel-firstbanner-hp, #carousel-firstbanner-hp>.carousel-item{
+    height: 120%;
+}
+
+.div-youthway-text{
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    width: 100% ;
+    height: 100%;
+    background: rgba(3, 36, 151, 0.41);
+}
+
+.div-first-banniere{
+    width: 100%;
+    height: 30%;
+}
+}
+
+
+
+/* Sharing on media style CSS code */
+
+/* .page-media-link {
+    padding: 110px;
+    display: flex;
+    justify-content: space-around;
+} */
+
+.bg-facebook-link {
+    background: #3156df;
+}
+
+.bg-linkdin-link {
+    background: #0e76a8;
+}
+
+.bg-twitter-link {
+    background: #00acee;
+}
+.bg-orange{
+    background: #ff8000;
+}
+
+/*
+home page style */
+/* .div-grand-benin{
+    animation: haut ease-out 2s;
+} */
+
+@keyframes haut {
+    0%{
+        opacity: 0;
+        margin-left: -100px  ;
+    }
+    100%{
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+#navbar{
+    padding: 0;
+}
+.mobile-toggle,
+.mobile-nav-square {
+  display: none;
+  background: transparent !important;
+}
+.btn-x {
+  background: transparent !important;
+}
+.offcanvas {
+  display: none;
+}
+
+.logo-abbr{
+    width:220px;
+}
+.navbar-nav>div{
+    width: 60%;
+    margin-right:100px;
+}
+.li-devenir-partenaire>a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* Mobile navbar */
+.offcanvas-body > ul {
+    list-style-type: none;
+  }
+  .offcanvas-body > ul li {
+    padding-bottom: 8px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid silver;
+    font-weight: 500;
+  }
+  .offcanvas-body > ul > li a {
+    width: 100%;
+    font-weight: 500;
+    height: 100%;
+    color: #032497;
+  }
+
+@media screen and (max-width:1105px) {
+    .logo-abbr{
+        width:200px;
+    }
+    .navbar-nav>div{
+        width: 90%;
+        margin-right:50px;
+    }
+    .li-devenir-partenaire>a{
+        padding: 20px 30px 20px 35px;
+    }
+    .i-only-web{
+        display: none;
+    }
+}
+@media screen and (max-width:990px) {
+    .offcanvas,
+    .mobile-toggle {
+      display: block;
+    }
+    #flash {
+      display: none;
+    }
+    #navbar{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+}
+
+/* Page domaine style code  */
+
+#p-soutien{
+    width: 75%;
+}
+
+
+@media screen and (max-width:990px) {
+    #p-soutien{
+        width: 95%;
+        display: none;
+    }
+}
+
+/* Article page style code */
+
+.article-section-card{
+    background-color: rgb(235, 234, 234);
+    border-right: 15px solid silver;
+    width:49%;
+}
+@media screen and (max-width:990px) {
+    .article-section-card{
+        width: 100%;
+    }
+}
+#article-section-card-content{
+    display: flex;
+
+}
+#article-section-card-content>div:first-child{
+    width: 33.33%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+#article-section-card-content>div:last-child{
+    width: 66.66%;
+
+}
+@media screen and (max-width:640px) {
+    #article-section-card-content {
+        flex-direction: column;
+    }
+    #article-section-card-content>div:last-child{
+        width: 100%;
+
+    }
+    #article-section-card-content>div:first-child{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 80%;
+    }
+    .article-section-card{
+        border-right: 5px solid silver;
+    }
+}
+
+
+/* Seconde
+
+cahier 2 pq   2400
+calculatrice  1500
+vrai dessinateur 500
+6 bics        600
+crayon-gomme   150
+colle-scoche   300
+couverture     500
+TP 200 pages   1000
+
+CI
+livre 2000
+sac 3500
+ardoise 400
+gomme + crayon + bic + craie 750
+goude 500
+cahier 1000 */

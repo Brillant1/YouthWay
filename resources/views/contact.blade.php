@@ -21,15 +21,17 @@
         </div>
     @endif
     <div class="container-fluid mt-5 ">
-        <div class="container">
-            <form action="{{ route('contact-stroe') }}" method="POST">
+        <p class="text-center fs-lg-5 fs-md-6 text-primary mt-3 ">Voulez-vous être partenaire / sponsor / membre ou avez-vous des préoccupations, des suggestions ?<br>
+        <span>Vous êtes au bon endroit ! </span>
+        </p>
+        <div class=" mt-5 " id="container-form-contact">
+            <form action="{{ route('contact-stroe') }}" method="POST" class="mt-3">
                 @csrf
                 <div class="row mt-3">
                     <div class="col-12 col-lg-6 col-sm-12 col-md-6 px-3">
                         <label for="nom">Nom et Prénom(s)<span class="text-danger fw-bold">*</span></label>
                         <input type="text" id="nom" class=" border border-1 form-control px-3" name="nom"
                             required>
-
                     </div>
                     <div class="col-12 col-lg-6 col-sm-12 col-md-6 px-3">
                         <label for="email">Adresse mail<span class="text-danger fw-bold">*</span></label>
@@ -72,8 +74,8 @@
             </form>
         </div>
         <div class="container-fluid localisation mb-5 mt-4">
-            <div class=" d-flex justify-content-center align-items-center">
-                <div class="localisation-dec w-50 ms-5 ps-5 " >
+            <div class=" row d-flex justify-content-center align-items-center">
+                <div class="localisation-dec col-lg-6 col-md-12  ps-5 py-md-5 py-5 " >
                     <div class="row">
                         <p class="col col-1 d-flex justify-content-center align-items-center bg-success icon-reseau"
                             >
@@ -84,7 +86,7 @@
                             </svg>
                         </p>
                         <div class="col d-flex justify-content-center  flex-column" style="line-height:15px;">
-                            <p class="fw-bold fs-5">Rue de la Cours Suprême, Ouando, Porto-Novo</p>
+                            <p class="fw-bold fs-6" style="line-height: 30px;">Rue du minitre Bénoît DEGLA, Ouèssè, BOTTI</p>
                             <p>Notre situation géogrphique</p>
                         </div>
                     </div>
@@ -97,7 +99,7 @@
                               </svg>
                         </p>
                         <div class="col d-flex justify-content-center  flex-column" style="line-height:15px; ">
-                            <p class="fw-bold fs-5">+229 95 37 11 54</p>
+                            <p class="fw-bold fs-6">+229 95 37 11 54</p>
                             <p>Des préoccupations urgentes ? Appelez-nous</p>
                         </div>
                     </div>
@@ -110,7 +112,7 @@
                             </svg>
                         </p>
                         <div class="col d-flex justify-content-center  flex-column" style="line-height:15px; ">
-                            <p class="fw-bold fs-5">contact@youthway.com</p>
+                            <p class="fw-bold fs-6">contact@youthway.com</p>
                             <p>Ecrivez-nous !</p>
                         </div>
                     </div>
@@ -123,14 +125,14 @@
                               </svg>
                         </p>
                         <div class="col d-flex justify-content-center  flex-column" style="line-height:15px; ">
-                            <p class="fw-bold fs-5">Lundi au Vendredi, de 8h00 à 18h00</p>
+                            <p class="fw-bold fs-lg-5 fs-6" style="line-height: 30px;">Lundi au Vendredi, de 8h00 à 18h00</p>
                             <p>Nos heures d'ouverture</p>
                         </div>
                     </div>
 
 
                 </div>
-                <div class="map-dec col-6">
+                <div class="map-dec col-lg-6 col-md-12">
                     <img src=" {{ asset('images/contact.jpg') }}" alt="" class="w-100" style="height: 550px;">
                 </div>
             </div>

@@ -57,16 +57,16 @@
         </div>
     </section>
 
-    <div id="carouselExampleIndicators" class="carousel slide container-fluid p-0 m-0 position-relative mt-5"
+    <div id="" class=" container-fluid p-0 m-0 px-md-5 position-relative mt-5"
     data-bs-ride="carousel">
     <div class=" historique-container d-flex justify-content-center align-items-center flex-column">
-        <h3 class="text-white ms-5 fw-bold text-center" style="line-height:50px;">
-            Voulez-vous faire un geste pour accompagner les actions que nous menons ?
+        <h3 class="text-white  fw-bold text-center" style="line-height:40px;">
+            Voulez-vous faire un geste pour accompagner nos actions ?
         </h3>
-        <p class="w-75 text-center fs-5 text-white">
-            Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus.
+        <p class=" text-center fs-5 text-white" id="p-soutien" >
+            Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam.
         </p>
-        <button class="btn btn-light font-bold btn-sm rounded-pill fs-6 mt-3 px-5 py-3 text-uppercase">Soutenez-nous ici
+        <button class="btn btn-light font-bold btn-sm rounded-pill fs-6 mt-2 px-5 py-lg-3 py-2 text-uppercase">Soutenez-nous ici
             &nbsp;
             <i>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"

@@ -14,17 +14,16 @@
     </div>
 </div>
 
-
 <div class="container-fluid mt-5">
-    <div class="container d-flex justify-content-between align-items-center mt-5">
-        <div class="mt-5">
+    <div class="container d-flex justify-content-between align-items-center mt-5" id="promottuer-section">
+        <div class="mt-lg-5">
 
-            <div class="img-presentation-container shadowd">
+            <div class="img-presentation-container shadow">
 
             </div>
         </div>
-        <div class="ms-5 mt-5">
-            <h1 class="fw-bold mb-3 pb-1 titre-presentation-promotteur">Qui est le promoteur de YouthWay ?</h1>
+        <div class="ms-lg-5 ms-0 mt-5">
+            <h1 class="fw-bold mb-3 pb-1 "><span class="titre-presentation-promotteur">Qui est le promoteur de YouthWay ?</span></h1>
             <p class=" text-presentation-promotteur mt-4">Nulla porttitor accumsan tincidunt. Mauris blandit aliquet
                 elit, eget
                 tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh.
@@ -32,14 +31,14 @@
                 malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Nulla
                 porttitor accumsan
                 tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-            <a href="#" class="btn rosette-bg-orange text-white fw-bold rounded-pill p-2 px-4 mt-2">Savoir plus sur moi</a>
+            <a href="#" class="btn rosette-bg-green text-white fw-bold rounded-pill p-2 px-4 mt-2">Savoir plus sur moi</a>
         </div>
     </div>
 </div>
 
 <div class="container-fluid">
-    <div class="container mt-5 pt-5">
-        <h1 class="fw-bold mb-3 pb-1 naissance-youthway-text">Comment est née YouthWay ?</h1>
+    <div class="container mt-lg-5 pt-5">
+        <h1 class="fw-bold mb-3 pb-1"><span class="naissance-youthway-text">Comment est née YouthWay ?</span></h1>
         <p class="p-historique pt-4">
             Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt
@@ -78,7 +77,7 @@
         </p>
     </div>
     <div class="container mt-5">
-        <h1 class="fw-bold mb-3 pb-1 titre-mission">Mission & Vision</h1>
+        <h1 class="fw-bold mb-3 pb-1 "><span class="titre-mission">Mission & Vision</span></h1>
 
         <p class="p-historique">
             Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas

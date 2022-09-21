@@ -9,12 +9,12 @@
             text-decoration: none;
         }
         .section-footer {
-    background: #2f2f2f;
-}
+            background: #2f2f2f;
+        }
     </style>
     <div class="container-fluid mt-4 d-flex justify-content-center"  >
-        <div class="row  " style="width:90%;">
-            <div class="col-md-4 col-sm-6 col-lg-3   d-flex flex-column align-items-center">
+        <div class="row d-flex justify-content-evenly  " style="width:90%;">
+            <div class="col-md-4 col-sm-6 col-lg-3 mt-3   d-flex flex-column align-items-center">
                 <a class="bg-white p-2" href=" {{ route('accueil') }} "><img src="{{ asset('images/youth2.png') }}" alt="logo DEC"
                         width="250px"></a>
                 <h5 class="mt-3 font-bold text-white">
@@ -23,7 +23,7 @@
                 </h5>
                 {{-- <p class="text-spacifique-color">Organisation à but non lucratif </p> --}}
             </div>
-            <div class="col-md-4 col-sm-6 col-lg-3 d-flex  align-items-center flex-column ">
+            <div class="col-md-4 col-sm-6 col-lg-3 d-flex mt-3 align-items-center flex-column ">
                 <h5 class="text-white mb-4">PLAN DU SITE</h5>
                 <div class="plan-site ">
                     <p>
@@ -68,7 +68,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4  d-flex  align-items-start flex-column flex-column">
+            <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 mt-3  d-flex  align-items-start flex-column flex-column">
                 <h5 class="text-white">Suivez-nous sur nos pages</h5>
                 <div class="d-flex justify-content-between align-items-center" style="width: 60%;">
                     <a href="" class="mt-2">
@@ -100,10 +100,10 @@
                         </svg>
                     </a>
                 </div>
-                <a href="" class="mt-5 rosette-bg-orange rounded-pill text-white px-5 fs-5 py-1">MEDIATHEQUE</a>
+                <a href="" class="mt-5 rosette-bg-blue-pure rounded-pill text-white px-5 fs-5 py-1">MEDIATHEQUE</a>
             </div>
 
-            <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4  d-flex  flex-column">
+            <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 px-5 mt-3  d-flex  flex-column">
                 <h5 class="text-start text-white">Abonnez-vous à la newsletter</h5>
                 <div>
                     <style>
@@ -125,7 +125,7 @@
 
         </div>
     </div>
-    <div class="d-flex justify-content-center text-center text-white footer-bottom pt-3 bg-dark">
+    <div class="text-center text-white footer-bottom pt-3 bg-dark">
         <p class="">&copy Copyright 2015 - {{ date('Y') }} YOUTHWAY. </p>
         <p class="px-2 footer-pipe-web">| </p>
         <p> Tous droits réservés</p>

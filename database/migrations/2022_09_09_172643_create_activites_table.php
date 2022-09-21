@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('date_debut');
             $table->date('date_fin');
             $table->string('photo');
-           
+
             $table->foreignId('domaine_id')->constrained()->onDelete('cascade');
             //$table->foreignId('partner_id')->constrained()->onDelete('cascade');
             $table->timestamps();

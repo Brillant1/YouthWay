@@ -9,6 +9,8 @@ class Activite extends Model
 {
     use HasFactory;
 
+
+
     protected $fillable = [
         'titre',
         'description',
@@ -17,6 +19,10 @@ class Activite extends Model
         'date_fin',
         'statut',
         'domaine_id'
+    ];
+
+    protected $casts = [
+        'photo'=> 'array'
     ];
 
 }

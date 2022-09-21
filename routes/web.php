@@ -41,12 +41,12 @@ Route::get('actualite/detail/{id}', [GuestController::class, 'showActualiteDetai
 Route::get('contact', [ContactMailController::class, 'create'])->name('contact');
 Route::post('contact', [ContactMailController::class, 'store'])->name('contact-stroe');
 
-Route::get('accueil', [GuestController::class,'showHomePage'])->name('accueil');
+Route::get('/', [GuestController::class,'showHomePage'])->name('accueil');
+
 
 Route::get('home', function(){
     return view('admin.home');
 })->name('home');
-
 
 
 Route::get('/dashboard', function () {

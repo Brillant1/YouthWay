@@ -64,6 +64,8 @@
                             <div class="col-lg-4 col-md-6  col-sm-12  card-container-activity mt-5">
                                 <a href="#" class="text-dark">
                                     <div class="card">
+
+                                        
                                         <img src="{{ asset('storage/' . $activite->photo) }}" class="card-img-top" alt="...">
                                         <div class="card-body ps-0">
                                             <h5 class="card-title font-weight-bold fs-5 title-activity rosette-text-orange">{{ $activite->titre }}
