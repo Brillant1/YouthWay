@@ -43,8 +43,10 @@ class ActiviteController extends Controller
 
         $activite = new Activite();
 
-
+      
         $filename = Storage::disk('public')->put('photo_activites', $request->photo);
+
+
         $activite->titre = $request->titre;
         $activite->description = $request->description;
         $activite->date_debut = $request->date_debut;

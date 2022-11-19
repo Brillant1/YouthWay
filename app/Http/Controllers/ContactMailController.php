@@ -32,8 +32,7 @@ class ContactMailController extends Controller
             'message' => $request->message
         ];
 
-
-        Mail::to('esaietchagnonsi@gmail.com')->send(new ContactFormMail($detailMessage));
+        //Mail::to('esaietchagnonsi@gmail.com')->send(new ContactFormMail($detailMessage));
         return back()->with('messageSend', 'Message envoyé avec succès ! Restez à l\'écoute pour notre retour');
 
     }

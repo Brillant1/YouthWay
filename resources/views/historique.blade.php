@@ -3,7 +3,7 @@
 <div id="carouselExampleIndicators" class="carousel slide container-fluid p-0 m-0   position-relative" data-bs-ride="carousel">
 
     <div class=" historique-container d-flex justify-content-center flex-column">
-        <h1 class="text-white ms-5 fw-bold text-center" style="line-height:50px;">
+        <h1 class="text-white ms-5 fw-bold text-center h1-historique mt-2" style="line-height:50px;">
             NOTRE HISTOIRE
         </h1>
     </div>
@@ -14,11 +14,11 @@
     </div>
 </div>
 
-<div class="container-fluid mt-5">
-    <div class="container d-flex justify-content-between align-items-center mt-5" id="promottuer-section">
+<div class="container-fluid mt-0 d-flex justify-content-center align-items-center ">
+    <div class=" d-flex justify-content-between align-items-center mt-5 container-mobile" id="promoteur-section">
         <div class="mt-lg-5">
 
-            <div class="img-presentation-container shadow">
+            <div class="img-presentation-container shadow img-fluid">
 
             </div>
         </div>
@@ -31,13 +31,13 @@
                 malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Nulla
                 porttitor accumsan
                 tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-            <a href="#" class="btn rosette-bg-green text-white fw-bold rounded-pill p-2 px-4 mt-2">Savoir plus sur moi</a>
+            <a href="#" class="btn rosette-bg-green text-white fw-bold rounded-pill p-2 px-4 mt-2 savoir-plus">Savoir plus sur moi</a>
         </div>
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="container mt-lg-5 pt-5">
+<div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+    <div class=" container-mobile mt-lg-5 pt-5">
         <h1 class="fw-bold mb-3 pb-1"><span class="naissance-youthway-text">Comment est née YouthWay ?</span></h1>
         <p class="p-historique pt-4">
             Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
@@ -76,7 +76,7 @@
 
         </p>
     </div>
-    <div class="container mt-5">
+    <div class=" container-mobile mt-5">
         <h1 class="fw-bold mb-3 pb-1 "><span class="titre-mission">Mission & Vision</span></h1>
 
         <p class="p-historique">
@@ -92,4 +92,20 @@
         </p>
     </div>
 </div>
+
+{{-- <script>
+    $(document).ready(function() {
+        if ($(window).width() <= 991) {
+            $('#promottuer-section').removeClass('container');
+            $('#promottuer-section').addClass('container-fluid');
+            $('#promottuer-section').addClass('ms-3');
+        }
+        else{
+            $('#promottuer-section').removeClass('container-fluid');
+            $('#promottuer-section').removeClass('ms-3');
+            $('#promottuer-section').addClass('container');
+
+        }
+    })
+</script> --}}
 @endsection

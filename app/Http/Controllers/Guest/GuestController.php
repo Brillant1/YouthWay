@@ -43,9 +43,15 @@ class GuestController extends Controller
         return view('detail-actualite', compact('actualite','actualites', 'shareOnMedia'));
     }
 
+    public function showActiviteDetail($id){
+        $activite =Activite::findOrFail($id);
+        return view('detail-activite', compact('activite'));
+    }
+
     public function showHomePage(){
         $actualites = Actualite::all()->take(3);
-        return view('accueil', compact('actualites'));
+        $activites = Activite::all()->take(3);
+        return view('accueil', compact('actualites','activites'));
     }
 }
 

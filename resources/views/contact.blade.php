@@ -15,18 +15,20 @@
     </div>
 </div>
 
-    @if (session('messageSend'))
-        <div class="alert alert-success container mb-4 mt-5">
-            <h6> {{ session('messageSend') }} </h6>
-        </div>
-    @endif
     <div class="container-fluid mt-5 ">
         <p class="text-center fs-lg-5 fs-md-6 text-primary mt-3 ">Voulez-vous être partenaire / sponsor / membre ou avez-vous des préoccupations, des suggestions ?<br>
         <span>Vous êtes au bon endroit ! </span>
         </p>
         <div class=" mt-5 " id="container-form-contact">
+
+
             <form action="{{ route('contact-stroe') }}" method="POST" class="mt-3">
                 @csrf
+                @if (session('messageSend'))
+                <div class="alert alert-success alert-dismissible container mb-4 mt-5">
+                    <h6> {{ session('messageSend') }} </h6>
+                </div>
+            @endif
                 <div class="row mt-3">
                     <div class="col-12 col-lg-6 col-sm-12 col-md-6 px-3">
                         <label for="nom">Nom et Prénom(s)<span class="text-danger fw-bold">*</span></label>

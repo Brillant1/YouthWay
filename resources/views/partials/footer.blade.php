@@ -13,8 +13,8 @@
         }
     </style>
     <div class="container-fluid mt-4 d-flex justify-content-center"  >
-        <div class="row d-flex justify-content-evenly  " style="width:90%;">
-            <div class="col-md-4 col-sm-6 col-lg-3 mt-3   d-flex flex-column align-items-center">
+        <div class="row d-flex  justify-content-evenly" style="width:90%;">
+            <div class=" col-2  col-md-4 col-sm-6 col-lg-3 mt-3   d-flex flex-column align-items-center">
                 <a class="bg-white p-2" href=" {{ route('accueil') }} "><img src="{{ asset('images/youth2.png') }}" alt="logo DEC"
                         width="250px"></a>
                 <h5 class="mt-3 font-bold text-white">
@@ -23,7 +23,7 @@
                 </h5>
                 {{-- <p class="text-spacifique-color">Organisation à but non lucratif </p> --}}
             </div>
-            <div class="col-md-4 col-sm-6 col-lg-3 d-flex mt-3 align-items-center flex-column ">
+            <div class="  col-2 col-md-2 col-sm-6 col-lg-3 d-flex mt-3 align-items-center flex-column ">
                 <h5 class="text-white mb-4">PLAN DU SITE</h5>
                 <div class="plan-site ">
                     <p>
@@ -63,12 +63,23 @@
                                 <path fill-rule="evenodd"
                                     d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                             </svg>
-                            Actualités
+
                         </a>
                     </p>
+                    <p>
+                        <a href="{{ route('contact') }}" class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                            Contact
+                        </a>
+                    </p>
+
                 </div>
             </div>
-            <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 mt-3  d-flex  align-items-start flex-column flex-column">
+            <div class=" col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 mt-3  d-flex  align-items-start flex-column flex-column">
                 <h5 class="text-white">Suivez-nous sur nos pages</h5>
                 <div class="d-flex justify-content-between align-items-center" style="width: 60%;">
                     <a href="" class="mt-2">
@@ -103,7 +114,7 @@
                 <a href="" class="mt-5 rosette-bg-blue-pure rounded-pill text-white px-5 fs-5 py-1">MEDIATHEQUE</a>
             </div>
 
-            <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 px-5 mt-3  d-flex  flex-column">
+            <div class="  col-md-5 col-lg-4 col-xl-3 mx-auto mb-4 mt-3  d-flex  flex-column">
                 <h5 class="text-start text-white">Abonnez-vous à la newsletter</h5>
                 <div>
                     <style>
@@ -121,8 +132,6 @@
                     </form>
                 </div>
             </div>
-
-
         </div>
     </div>
     <div class="text-center text-white footer-bottom pt-3 bg-dark">

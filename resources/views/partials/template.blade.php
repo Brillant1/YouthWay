@@ -17,7 +17,7 @@
 
     @yield('content')
 
-    @include('partials.footer')
+    @include('partials.footer1')
 
     <script src="{{ asset('admin/js/jquery.min.js') }}"></script>
     <script src="https://cdn.kkiapay.me/k.js"></script>

@@ -61,20 +61,18 @@
                 <div class=" tab-pane fade show active row row-cols-1 row-cols-md-3 g-4 d-flex" id="all" role="tabpanel" aria-labelledby="all-tab">
                     @if (sizeof($activites) > 0)
                         @foreach ($activites as $activite)
-                            <div class="col-lg-4 col-md-6  col-sm-12  card-container-activity mt-5">
-                                <a href="#" class="text-dark">
+                            <div class="col-lg-4 col-md-6  col-sm-12  card-container-activity mt-5  ">
+                                <a href="{{ route('activite-detail', $activite->id) }}" class="text-dark">
                                     <div class="card">
-
-                                        
-                                        <img src="{{ asset('storage/' . $activite->photo) }}" class="card-img-top" alt="...">
+                                        <img src="{{ asset('storage/' . $activite->photo) }}" class="card-img-top" alt="..." style="object-fit: cover">
                                         <div class="card-body ps-0">
                                             <h5 class="card-title font-weight-bold fs-5 title-activity rosette-text-orange">{{ $activite->titre }}
                                             </h5>
-                                            <p class="card-text mt-3 title-activity-content ">{!! Str::substr($activite->description, 0, 200) . '...' !!}</p>
+                                            <p class="card-text mt-3 title-activity-content ">{!! Str::substr($activite->description, 0, 100) . '...' !!}</p>
 
                                             <div class="d-flex justify-content-between mt-4">
                                                 <p class="font-bold">Publié le: {{ $activite->created_at->format('d-m-Y') }}</p>
-                                                <p class="rosette-text-orange font-bold">Voir plus
+                                                <a href="{{ route('activite-detail', $activite->id) }}" class="rosette-text-orange font-bold">Voir plus
 
                                                     <i>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -84,7 +82,7 @@
                                                                 d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                                                         </svg>
                                                     </i>
-                                                </p>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -140,5 +138,14 @@
     <script amount=5000 email="" position="center" theme="#032497F5" phone="97000000"
     firstname="" lastname="" sandbox="true" callback=" "
     key="0b7354b0ed5a11ec848227abfc492dc7" src="https://cdn.kkiapay.me/k.js">
+</script>
+<script>
+    $(document).ready(function() {
+        $('.card-container-activity .card').hover(function() {
+            $(this).addClass('shadow');
+        }, function() {
+            $(this).removeClass('shadow');
+        })
+    })
 </script>
 @endsection

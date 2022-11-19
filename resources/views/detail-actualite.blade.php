@@ -46,10 +46,14 @@
                     <a href="" class="h4 fw-bold" style="word-spacing: 10px; letter-spacing:5px">Tous les
                         secteurs</a>
                 </div>
-                <div class="col-lg-8">
+
+
+
+
+                <div class="col-lg-8 shadow px-3" style="border-radius: 15px;">
                     <img src="{{ asset('storage/' . $actualite->photo) }}" alt="" class="ps-0 w-100">
                     <div class="d-flex justify-content-between align-items-center fs-5 mt-5">
-                        <h6>Publié le : {{ $actualite->created_at->format('d-m-Y') }}</h6>
+                        <h6>Prévu pour le : <span class=" rosette-text-blue"> {{ $actualite->date_debut }} au  {{ $actualite->date_fin }}</span></h6>
                         <div class="d-flex">
                             <p
                                 class="py-1 text-uppercase d-flex justify-content-center align-items-center px-4 rounded-pill fw-bold fs-6
@@ -62,7 +66,8 @@
                         </div>
 
                     </div>
-                    <h2 class="my-3">{{ $actualite->titre }}</h2>
+                    <h2 class="my-3 rosette-text-orange">{{ $actualite->titre }}</h2>
+                    <hr>
                     <div class="mb-3" style="line-height: 30px; font-size:1.2rem">
                         {!! $actualite->description !!}
                     </div>

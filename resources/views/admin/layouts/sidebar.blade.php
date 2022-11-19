@@ -77,6 +77,15 @@
 
                 </ul>
             </li>
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                <i class="la la-users"></i>
+                <span class="nav-text">Témoignages</span>
+            </a>
+            <ul aria-expanded="false">
+                <li><a href="{{ route('temoignages.index') }}">Liste</a></li>
+                <li><a href="{{ route('temoignages.create') }}">Ajouter</a></li>
+            </ul>
+        </li>
 
 
 

@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('activites', function (Blueprint $table) {
+        Schema::create('temoignages', function (Blueprint $table) {
             $table->id();
-            $table->mediumText('titre');
-            $table->longText('description');
-            $table->date('date_debut');
-            $table->date('date_fin');
+            $table->string('nom');
+            $table->string('prenom');
+            $table->string('email');
             $table->string('photo');
-            $table->foreignId('domaine_id')->constrained()->onDelete('cascade');
-            //$table->foreignId('partner_id')->constrained()->onDelete('cascade');
+            $table->mediumText('message');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activites');
+        Schema::dropIfExists('temoignages');
     }
 };

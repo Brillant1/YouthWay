@@ -88,7 +88,7 @@
 
                                     {{-- Multiple file upload form --}}
 
-                                    <div class="input-group control-group increment">
+                                    {{-- <div class="input-group control-group increment">
                                         <input type="file" name="photo" class="form-control" required>
                                         <div class="input-group-btn">
                                             <button class="btn btn-add" type="button" style="background: #178B01;"><i
@@ -113,15 +113,15 @@
                                                     </i> </button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
-                                    {{-- <div class="col-lg-16 col-md-6 col-sm-12">
+                                    <div class="col-lg-16 col-md-6 col-sm-12">
                                         <div class="form-group">
                                             <label class="form-label" for="photo">Charger une ou des images(s) illustrative(s) <span class="text-danger fw-bold">*</span> </label>
                                             <input type="file" class="form-control" name="photo" id="photo" required>
                                         </div>
                                         <p class="mt-5"><span class="text-danger fw-bold"> * </span>Champ obligatoire</p>
-                                    </div> --}}
+                                    </div>
 
                                     <div class="col-lg-12 col-md-12 col-sm-12 mt-3">
                                         <button type="submit" class="btn btn-primary">Envoyer</button> &nbsp;

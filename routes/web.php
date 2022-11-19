@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ActiviteController;
 use App\Http\Controllers\Admin\ActualiteController;
 use App\Http\Controllers\Admin\FlashInfoController;
+use App\Http\Controllers\Admin\TemoignageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::resource('flashInfos', FlashInfoController::class);
 Route::resource('domaines', DomaineController::class);
 Route::resource('medias', MediaController::class);
 Route::resource('partenaires', PartnerController::class);
+Route::resource('temoignages', TemoignageController::class);
 
 
 Route::get('actualite', [GuestController::class, 'displayAllActualites'])->name('actualite');
@@ -36,6 +38,7 @@ Route::get('domaine', [GuestController::class, 'getAllDomaines'])->name('domaine
 Route::get('activite', [GuestController::class, 'getAllActivites'])->name('activite');
 
 Route::get('actualite/detail/{id}', [GuestController::class, 'showActualiteDetail'])->name('actualite-detail');
+Route::get('activite/detail/{id}', [GuestController::class,'showActiviteDetail'])->name('activite-detail');
 
 
 Route::get('contact', [ContactMailController::class, 'create'])->name('contact');
@@ -51,7 +54,7 @@ Route::get('home', function(){
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->name('dashboard');
 
 
 Route::get('historique', function(){
