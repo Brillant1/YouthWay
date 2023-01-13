@@ -20,7 +20,7 @@ class ContactMailController extends Controller
             'nom' => 'required|string',
             'email' => 'required|email',
             'objet' => 'required|string',
-            'phone' => 'required|numeric',
+            'phone' => 'required',
             'message' => 'required|string'
         ]);
 

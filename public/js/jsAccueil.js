@@ -1,5 +1,4 @@
-
-  $('.popup-youtube').magnificPopup({
+$('.popup-youtube').magnificPopup({
     disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
@@ -21,6 +20,21 @@
         }
     }
 });
+
+
+FedaPay.init('.pay-btn', {
+    public_key: 'pk_live_j_PY-QiIVKuSKYi73s1VcLdH',
+    transaction: {
+        amount: 100,
+        description: 'Acheter mon produit'
+    },
+    customer: {
+        email: 'johndoe@gmail.com',
+        lastname: 'Doe',
+        firstname: 'John',
+    }
+});
+
 
 
 

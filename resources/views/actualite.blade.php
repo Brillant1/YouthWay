@@ -12,13 +12,13 @@
 </style>
     <div id="carouselExampleIndicators" class="carousel slide container-fluid p-0 m-0   position-relative"
         data-bs-ride="carousel">
-        <div class=" historique-container d-flex justify-content-center flex-column">
+        <div class=" actualite-container d-flex justify-content-center flex-column">
             <h1 class="text-white ms-5 fw-bold text-center" style="line-height:50px;">
                 NOS ACTUALITÉS
             </h1>
         </div>
-        <div class="carousel-inner historique-img-container-parent">
-            <div class="carousel-item active historique-img-container">
+        <div class="carousel-inner actualite-img-container-parent">
+            <div class="carousel-item active actualite-img-container">
 
             </div>
         </div>
@@ -46,9 +46,11 @@
             <div class="row d-flex justify-content-between" style="width: 90%;">
                 @if (sizeof($actualites)>0)
                 @foreach ($actualites as $actualite)
+
+
                         <div class=" card mb-3 pt-3 article-section-card ">
                             <div class="article-section-card-content" id="article-section-card-content">
-                                <div class="">
+                                <div class="" style="height: 250px;">
                                     <img src="{{ asset('storage/'.$actualite->photo) }}" class="img-fluid rounded-start w-100 h-100 pb-3" alt="..." >
                                 </div>
                                 <div class="">
@@ -74,21 +76,21 @@
 
         <section >
             <div class="container-fluid mt-5 mb-5 d-flex justify-content-center">
-                <div class="container rosette-bg-green py-5 rounded text-white d-flex justify-content-center align-items-center flex-column soutien-actualite-content">
-                    <h2 class="text-center"><span>Vous voulez nous soutenir pour nos activités ?</span></h2>
-                    <p class="px-2  mt-3 mb-2 inscrire-reinscrire-content text-inscription w-100 w-lg-75  text-center " style="font-size: 1.2rem;">"Le bien que l'on fait, le ciel le rend. Le bien que l'on garde, la terre le prend. On ne donne jamais
+                <div class="container shadow py-5 rounded  d-flex justify-content-center align-items-center flex-column soutien-actualite-content">
+                    <h2 class="text-center"><span>Nous avons besoin de votre soutien pour impacter plus.</span></h2>
+                    <p class="px-2  mt-3 mb-2 inscrire-reinscrire-content text-inscription text-center " style="font-size: 1.2rem; width:80%;">"Le bien que l'on fait, le ciel le rend. Le bien que l'on garde, la terre le prend. On ne donne jamais
                         rien sans l'avoir reçu et tout ce qui n'est pas donné est perdu" Pape Jean-Paul II</p>
                         <div class="d-flex justify-content-center w-75 mt-4 fs-6" >
-                            <a href="" class="rounded fw-bold bg-white favorite-color px-4 py-3 me-3 text-center kkiapay-button" id="inscription-link">Cliquez ici pour votre don</a>
+                            <a href="#"  class="rounded fw-bold bg-success text-white px-4 py-3 me-3 text-center kkiapay-button pay-btn" >Nous soutenir</a>
                         </div>
                 </div>
             </div>
         </section>
 
-        <script amount=5000 email="" position="center" theme="#032497F5" phone="97000000"
+        {{-- <script amount=5000 email="" position="center" theme="#032497F5" phone="97000000"
         firstname="" lastname="" sandbox="true" callback=" "
         key="0b7354b0ed5a11ec848227abfc492dc7" src="https://cdn.kkiapay.me/k.js">
-        </script>
+        </script> --}}
 
     <script>
         $(document).ready(function() {

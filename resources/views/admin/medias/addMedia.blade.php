@@ -42,9 +42,11 @@
                             <form method="post" action="{{ route('medias.store') }}" enctype="multipart/form-data" style="z-index: -100">
                                 @csrf
                                 <select class=" form-select form-control-lg form-control  mb-3 " id="media_id" name="type_media" required>
-                                    @foreach ($medias as $media)
+                                    <option value="video">Vidéo</option>
+                                    <option value="photo">Photo</option>
+                                    {{-- @foreach ($medias as $media)
                                         <option value="{{ $media }}">{{ $media }}</option>
-                                    @endforeach
+                                    @endforeach --}}
                                 </select>
                                 <div class="input-group control-group increment">
                                     <input type="file" name="photo[]" class="form-control" required>

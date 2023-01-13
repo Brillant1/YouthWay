@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\ContactMailController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Admin\ActiviteController;
 use App\Http\Controllers\Admin\ActualiteController;
 use App\Http\Controllers\Admin\FlashInfoController;
 use App\Http\Controllers\Admin\TemoignageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +26,37 @@ use App\Http\Controllers\Admin\TemoignageController;
 
 
 
-Route::resource('activites', ActiviteController::class);
-Route::resource('actualites', ActualiteController::class);
-Route::resource('flashInfos', FlashInfoController::class);
-Route::resource('domaines', DomaineController::class);
-Route::resource('medias', MediaController::class);
-Route::resource('partenaires', PartnerController::class);
-Route::resource('temoignages', TemoignageController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::resource('activites', ActiviteController::class);
+    Route::resource('actualites', ActualiteController::class);
+    Route::resource('flashInfos', FlashInfoController::class);
+    Route::resource('domaines', DomaineController::class);
+    Route::resource('medias', MediaController::class);
+    Route::resource('partenaires', PartnerController::class);
+    Route::resource('temoignages', TemoignageController::class);
+
+    Route::get('home', function(){
+        return view('admin.home');
+    })->name('home');
+
+
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+Route::get('/', [GuestController::class, 'showHomePage'])->name('accueil');
+
+
+
+
 
 
 Route::get('actualite', [GuestController::class, 'displayAllActualites'])->name('actualite');
@@ -44,17 +70,7 @@ Route::get('activite/detail/{id}', [GuestController::class,'showActiviteDetail']
 Route::get('contact', [ContactMailController::class, 'create'])->name('contact');
 Route::post('contact', [ContactMailController::class, 'store'])->name('contact-stroe');
 
-Route::get('/', [GuestController::class,'showHomePage'])->name('accueil');
 
-
-Route::get('home', function(){
-    return view('admin.home');
-})->name('home');
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
 
 Route::get('historique', function(){
@@ -62,7 +78,9 @@ Route::get('historique', function(){
 })->name('historique');
 
 
-
+Route::get('mediatheque', function(){
+    return view('mediatheque');
+})->name('mediatheque');
 
 
 require __DIR__.'/auth.php';

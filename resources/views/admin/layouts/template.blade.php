@@ -40,13 +40,9 @@
         @yield('content')
 
         @include('admin.layouts.footer')
-
-
-
     </div>
 
     @include('admin.layouts.js')
-
 
 
 </body>

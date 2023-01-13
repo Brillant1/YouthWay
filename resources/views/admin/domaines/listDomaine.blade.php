@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="content-body">
-    <!-- row -->
+ 
     <div class="container-fluid">
 
         <div class="row page-titles mx-0">
@@ -147,7 +147,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>

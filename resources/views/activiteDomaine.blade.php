@@ -57,30 +57,18 @@
         </div>
     </section>
 
-    <div id="" class=" container-fluid p-0 m-0 px-md-5 position-relative mt-5"
-    data-bs-ride="carousel">
-    <div class=" historique-container d-flex justify-content-center align-items-center flex-column">
-        <h3 class="text-white  fw-bold text-center" style="line-height:40px;">
-            Voulez-vous faire un geste pour accompagner nos actions ?
-        </h3>
-        <p class=" text-center fs-5 text-white" id="p-soutien" >
-            Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam.
-        </p>
-        <button class="btn btn-light font-bold btn-sm rounded-pill fs-6 mt-2 px-5 py-lg-3 py-2 text-uppercase">Soutenez-nous ici
-            &nbsp;
-            <i>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    fill="dark" class="bi bi-arrow-right fw-bold" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                </svg>
-            </i>
-        </button>
-    </div>
-    <div class="carousel-inner historique-img-container-parent">
-        <div class="carousel-item active historique-img-container">
 
-        </div>
+
+    <div class="container shadow py-5  mt-5 rounded  d-flex justify-content-center align-items-center flex-column soutien-actualite-content">
+        <h2 class="text-center"><span>Nous avons besoin de votre soutien pour impacter plus.</span></h2>
+        <p class="px-2  mt-3 mb-2 inscrire-reinscrire-content text-inscription text-center " style="font-size: 1.2rem; width:80%;">"Le bien que l'on fait, le ciel le rend. Le bien que l'on garde, la terre le prend. On ne donne jamais
+            rien sans l'avoir reçu et tout ce qui n'est pas donné est perdu" Pape Jean-Paul II</p>
+            <div class="d-flex justify-content-center w-75 mt-4 fs-6" >
+                <a href="#" class="rounded fw-bold bg-success text-white px-4 py-3 me-3 text-center pay-btn" >Nous soutenir</a>
+            </div>
+
     </div>
-</div>
+
+
+
 @endsection

@@ -98,7 +98,7 @@
                     </li> --}}
                     <li><a href="{{ route('actualite') }}">Actualités</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
-                    <li><a href="{{ route('contact') }}">Nos formations</a></li>
+                    <li><a href="{{ route('contact') }}">Médiathèque</a></li>
 
                 </ul>
             </div>
@@ -119,7 +119,7 @@
 
 
                     <li class="nav-item dropdown dropdown-etablissement li-web-only">
-                        <a class="nav-link dropdown-toggle  py-4 {{ Route::is(['activite','domaine']) ? 'active' : ' ' }}"
+                        <a class="nav-link dropdown-toggle  py-4 {{ Route::is(['activite','domaine', 'activite-detail']) ? 'active' : ' ' }}"
                             href="#" id="navbarScrollingDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="true">
                             Activités
@@ -127,8 +127,7 @@
                         <ul class="dropdown-menu p-0 rounded-0 dropdown-link-etablissement"
                             aria-labelledby="navbarScrollingDropdown">
                             <li class="nav-li-rose"><a class="dropdown-item p-3"
-                                    href="{{ route('activite') }}">Nos
-                                    activités</a></li>
+                                href="{{ route('activite') }}">Nos activités</a></li>
                             <li class="nav-li-rose"><a class="dropdown-item p-3"
                                     href="{{ route('domaine') }}">Domaines
                                     d'intervention</a></li>
@@ -137,7 +136,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link {{ Route::is('actualite') ? 'active' : ' ' }}"
+                        <a class="nav-link {{ Route::is(['actualite',  'actualite-detail']) ? 'active' : ' ' }}"
                             href="{{ route('actualite') }}">Actualités</a>
                     </li>
                     <li class="nav-item">
@@ -146,8 +145,8 @@
                     </li>
                 </div>
                 <li class="nav-item rosette-bg-green li-devenir-partenaire">
-                    <a href="" class="nav-link text-white fw-bold contaire-partenaire fs-6">
-                        Nos Formations &nbsp; <i class="i-only-web">
+                    <a href="{{ route('mediatheque') }}" class="nav-link text-white fw-bold contaire-partenaire fs-6">
+                        Médiathèque  &nbsp; <i class="i-only-web">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
                                 class="bi bi-arrow-right fw-bold" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
