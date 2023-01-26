@@ -54,6 +54,10 @@ class GuestController extends Controller
         $temoignages = Temoignage::all();
         return view('accueil', compact('actualites','activites','temoignages'));
     }
+
+    public function don(){
+        return view('don');
+    }
 }
 
 

@@ -70,6 +70,8 @@ Route::get('activite/detail/{id}', [GuestController::class,'showActiviteDetail']
 Route::get('contact', [ContactMailController::class, 'create'])->name('contact');
 Route::post('contact', [ContactMailController::class, 'store'])->name('contact-stroe');
 
+Route::get('don', [GuestController::class, 'don'])->name('create-don');
+Route::post('don', [GuestController::class, 'don'])->name('save-don');
 
 
 
