@@ -11,6 +11,7 @@ use App\Models\Actualite;
 use App\Models\Temoignage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Partner;
 
 class GuestController extends Controller
 {
@@ -52,7 +53,8 @@ class GuestController extends Controller
         $actualites = Actualite::all()->take(3);
         $activites = Activite::all()->take(3);
         $temoignages = Temoignage::all();
-        return view('accueil', compact('actualites','activites','temoignages'));
+        $partners = Partner::all();
+        return view('accueil', compact('actualites','activites','temoignages','partners'));
     }
 
     public function don(){

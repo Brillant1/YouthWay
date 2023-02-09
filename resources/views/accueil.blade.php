@@ -313,7 +313,7 @@
    </div>
 
     {{-- Partenaire section --}}
-    <section class="actualites my-5 container pt-5">
+    <section id="partenaires" class="partenaires services my-5 container pt-5">
         <div class="actualites-title mb-5">
             <h1
                 class=" fs-2 h1-rosette-presentation justify-content-flex-start align-items-center d-flex fw-bold">
@@ -322,7 +322,44 @@
             </h1>
         </div>
         <div class="container row m-auto actualite-item-container">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
+
+            <div class="row">
+                    <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
+                        <div class="icon-box text-center ">
+                            <div class=""> <img src="{{ asset('images/profile/1.jpg')}}"
+                            style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
+                        </div>
+                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
+                        <div class="icon-box text-center ">
+                            <div class=""> <img src="{{ asset('images/card/2.png')}}"
+                            style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
+                        </div>
+                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
+                        <div class="icon-box text-center ">
+                            <div class=""> <img src="{{ asset('images/profile/3.jpg')}}"
+                            style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
+                        </div>
+                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
+                        <div class="icon-box text-center ">
+                            <div class=""> <img src="{{ asset('images/testi3.png')}}"
+                            style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
+                        </div>
+                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
+                        </div>
+                    </div>
+
+
+            </div>
+            {{-- <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
 
                 <div class="carousel-inner ">
                     <div class="carousel-item active" data-bs-interval="7000">
@@ -408,7 +445,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            </div>
+            </div> --}}
 
         </div>
 
