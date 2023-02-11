@@ -292,9 +292,10 @@ textarea {
     padding: 10px;
 }
 .card-container-activity .card{
-    box-shadow: 0px 0 1px 1px rgb(226, 225, 225);
+    box-shadow: 0 2px 29px 0 rgba(68, 88, 144, 0.12);
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    background: #fff;
 }
 
 .card-container-activity .card img{
@@ -1268,6 +1269,13 @@ home page style */
         margin-right:60px;
     }
 }
+.youth-color{
+    color: #000688;
+}
+.bg-youth-color{
+    background-color: #000688;
+}
+
 .detail-activite-content{
     width:70%;
     border-radius:20px;
@@ -1535,7 +1543,6 @@ cahier 1000 */
 }
 .video-list .vid .title{
     columns: #333;
-
     font-size: 17px;
 }
 

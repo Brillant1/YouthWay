@@ -31,25 +31,21 @@
 
                     @endphp
                     <div class="d-flex flex-column mt-5">
-                        <h3 class=" rosette-text-green">{{ $activite->titre }}</h3>
-                        <p>Exécutée  du: <span class="fw-bold">{{ $date_debut }} au {{ $date_fin }}</span> </p>
-                        <p> <span class=" rosette-text-orange fw-bold">{{ $domaine->nom }}</span></p>
+                        <h3 class="rosette-text-green">{{ $activite->titre }}</h3>
+                        <div class=" d-flex justify-content-between mt-2">
+                            <p>Exécutée  du: <span class="fw-bold">{{ $date_debut }} au {{ $date_fin }}</span> </p>
+                            <p>Publié le: <span class=" fw-bold">{{ $activite->created_at->format('Y-m-d') }}  à {{ $activite->created_at->format('H:i')  }}</span></p>
+                        </div>
+                        <p> <span class=" rosette-text-orange"> <span class=" text-dark">Domaine d'action:</span> {{ $domaine->nom }}</span></p>
                     </div>
                 </div>
                 <hr>
                 <div>
                     <p>{!! $activite->description !!}</p>
-                    <p class="">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff8000" class="bi bi-calendar2-fill" viewBox="0 0 16 16">
-                            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM2.545 3h10.91c.3 0 .545.224.545.5v1c0 .276-.244.5-.546.5H2.545C2.245 5 2 4.776 2 4.5v-1c0-.276.244-.5.545-.5z"/>
-                        </svg>  &nbsp;
-
-
-                        {{ $activite->created_at->format('d-m-Y') }}</p>
                 </div>
                 <div class="d-flex justify-content-center align-items-center action-button">
-                    <a href="#" class="btn btn-primary px-5 rounded-pill me-3 pay-btn">Nous soutenir</a>
+                    <a href="{{ route('create-don') }}" class="btn btn-primary px-5 rounded-pill me-3">Nous soutenir</a>
                     <a href="{{ route('contact') }}" class="btn rosette-bg-orange px-5 rounded-pill text-white ms-3">Nous contacter</a>
                 </div>
             </div>

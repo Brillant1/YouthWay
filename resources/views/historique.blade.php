@@ -31,7 +31,7 @@
                 malesuada. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Nulla
                 porttitor accumsan
                 tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-            <a href="#" class="btn rosette-bg-green text-white fw-bold rounded-pill p-2 px-4 mt-2 savoir-plus">Savoir plus sur moi</a>
+            <a href="#" class="btn bg-youth-color text-white fw-bold rounded-pill p-2 px-4 mt-2 savoir-plus">Savoir plus sur moi</a>
         </div>
     </div>
 </div>
@@ -70,7 +70,8 @@
             sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat.
         </p>
         <p class="p-historique">
-            << Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.>> <span class="font-bold rosette-text-green fs-4">Paterne Mawoussi TCHAGNONSI</span>
+            << Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.>> <br>
+            <p class="font-bold youth-color fs-4 mt-2">Paterne Mawoussi TCHAGNONSI</p>
         </p>
         <p>
 

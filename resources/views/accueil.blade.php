@@ -128,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="text-center my-5"><a href="{{ route('domaine') }}" class="lien-historique mt-2">Voir plus <span><svg
+            <div class="text-center my-5"><a href="{{ route('domaine') }}" class="lien-historique mt-2">Tous les domaines <span><svg
                             width="14" height="10" viewBox="0 0 14 10" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -153,7 +153,7 @@
 
                 @foreach ($actualites as $actualite)
                     <div class="col-md-4 actualite-item">
-                        <div class="card">
+                        <div class="card h-100">
                             <span class="actualite-date">
                                 {{ date('d', strtotime($actualite->created_at)) }}<br>{{ date('M', strtotime($actualite->created_at)) }}.<br>{{ date('Y', strtotime($actualite->created_at)) }}</span>
                             <img src="{{ asset('storage/' . $actualite->photo) }}" class="card-img-top" alt="">
@@ -163,12 +163,12 @@
 
                                 </h5>
                                 <a href="{{ route('actualite-detail', $actualite->id) }}"
-                                    class="lien-article mt-5 float-end rosette-text-green fw-bold">Lire
-                                    l'article <span><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                    class="lien-article mt-5 float-end youth-color fw-bold">Lire
+                                    l'article <span><svg width="14" height="10" viewBox="0 0 14 10"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M0 4.99998C0 4.86737 0.0526784 4.74019 0.146447 4.64643C0.240215 4.55266 0.367392 4.49998 0.5 4.49998L12.293 4.49998L9.146 1.35398C9.05211 1.26009 8.99937 1.13275 8.99937 0.999979C8.99937 0.867204 9.05211 0.739865 9.146 0.645979C9.23989 0.552093 9.36722 0.499348 9.5 0.499348C9.63278 0.499348 9.76011 0.552093 9.854 0.645979L13.854 4.64598C13.9006 4.69242 13.9375 4.7476 13.9627 4.80835C13.9879 4.86909 14.0009 4.93421 14.0009 4.99998C14.0009 5.06575 13.9879 5.13087 13.9627 5.19161C13.9375 5.25236 13.9006 5.30753 13.854 5.35398L9.854 9.35398C9.76011 9.44787 9.63278 9.50061 9.5 9.50061C9.36722 9.50061 9.23989 9.44787 9.146 9.35398C9.05211 9.26009 8.99937 9.13275 8.99937 8.99998C8.99937 8.8672 9.05211 8.73987 9.146 8.64598L12.293 5.49998L0.5 5.49998C0.367392 5.49998 0.240215 5.4473 0.146447 5.35353C0.0526784 5.25976 0 5.13259 0 4.99998Z"
-                                                fill="#178b01" />
+                                                fill="#000688" />
                                         </svg>
                                     </span></a>
                             </div>
@@ -232,7 +232,7 @@
 
                 @foreach ($activites as $activite)
                     <div class="col-md-4 actualite-item">
-                        <div class="card">
+                        <div class="card h-100">
                             <span class="actualite-date">
                                 {{ date('d', strtotime($activite->created_at)) }}<br>{{ date('M', strtotime($activite->created_at)) }}.<br>{{ date('Y', strtotime($activite->created_at)) }}</span>
                             <img src="{{ asset('storage/' . $activite->photo) }}" class="card-img-top" alt="">
@@ -242,11 +242,11 @@
 
                                 </h5>
                                 <a href="{{ route('activite-detail', $activite->id) }}"
-                                    class="lien-article mt-5 float-end rosette-text-green fw-bold">Voir plus <span><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                    class="lien-article mt-5 float-end youth-color fw-bold">Voir plus <span><svg width="14" height="10" viewBox="0 0 14 10" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M0 4.99998C0 4.86737 0.0526784 4.74019 0.146447 4.64643C0.240215 4.55266 0.367392 4.49998 0.5 4.49998L12.293 4.49998L9.146 1.35398C9.05211 1.26009 8.99937 1.13275 8.99937 0.999979C8.99937 0.867204 9.05211 0.739865 9.146 0.645979C9.23989 0.552093 9.36722 0.499348 9.5 0.499348C9.63278 0.499348 9.76011 0.552093 9.854 0.645979L13.854 4.64598C13.9006 4.69242 13.9375 4.7476 13.9627 4.80835C13.9879 4.86909 14.0009 4.93421 14.0009 4.99998C14.0009 5.06575 13.9879 5.13087 13.9627 5.19161C13.9375 5.25236 13.9006 5.30753 13.854 5.35398L9.854 9.35398C9.76011 9.44787 9.63278 9.50061 9.5 9.50061C9.36722 9.50061 9.23989 9.44787 9.146 9.35398C9.05211 9.26009 8.99937 9.13275 8.99937 8.99998C8.99937 8.8672 9.05211 8.73987 9.146 8.64598L12.293 5.49998L0.5 5.49998C0.367392 5.49998 0.240215 5.4473 0.146447 5.35353C0.0526784 5.25976 0 5.13259 0 4.99998Z"
-                                                fill="#178b01" />
+                                                fill="#000688" />
                                         </svg>
                                     </span></a>
                             </div>
@@ -324,38 +324,24 @@
         <div class="container row m-auto actualite-item-container">
 
             <div class="row">
+                @forelse ($partners as $partner)
+
+
                     <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
                         <div class="icon-box text-center ">
-                            <div class=""> <img src="{{ asset('images/profile/1.jpg')}}"
+                            <div class=""> <img src="{{ asset('storage/'. $partner->photo) }}"
                             style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
                         </div>
-                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
+                            <h5 class="mt-4"><a href="{{ $partner->lien }}" style="color: black;text-align: center;"> {{ $partner->nom }}</a></h5>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
-                        <div class="icon-box text-center ">
-                            <div class=""> <img src="{{ asset('images/card/2.png')}}"
-                            style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
-                        </div>
-                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
-                        <div class="icon-box text-center ">
-                            <div class=""> <img src="{{ asset('images/profile/3.jpg')}}"
-                            style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
-                        </div>
-                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-3 mt-3 align-items-center d-flex justify-content-center rounded"  data-aos="zoom-in" data-aos-delay=" " style="height: 260px;" style="max-height:100px;">
-                        <div class="icon-box text-center ">
-                            <div class=""> <img src="{{ asset('images/testi3.png')}}"
-                            style="height: 140px; width: 140px; margin-rigth: 25px;margin-left;" alt="" >
-                        </div>
-                            <h5 class="mt-2"><a href="#" style="color: black;text-align: center;"> IFRI-UAC</a></h5>
-                        </div>
-                    </div>
+                    @empty
+
+                    <p class=" text-center h4"> Aucun partenaire</p>
+
+                @endforelse
+
+
 
 
             </div>

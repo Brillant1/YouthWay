@@ -69,7 +69,7 @@
                                             @if (sizeof($partenaires)>0)
                                                 @foreach ($partenaires as $partenaire)
                                                     <tr>
-                                                        <td><img src="{{ 'storage/'. $partenaire->photo }}" alt="" width="60" height="60"></td>
+                                                        <td><img src="{{ asset('storage/'. $partenaire->photo) }}" alt="" width="60" height="60"></td>
                                                         <td>{{ $partenaire->nom }}</td>
                                                         <td>{{ $partenaire->contact }}</td>
                                                         <td>{{ $partenaire->email }}</td>

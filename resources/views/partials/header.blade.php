@@ -1,6 +1,6 @@
 <header class="" style="">
     <div class="fw-bold text-white row bg-dark row " id="flash">
-        <div class="rosette-bg-green col-2 py-2 d-flex justify-content-center align-items-center text-uppercase fs-5">
+        <div class="bg-youth-color col-2 py-2 d-flex justify-content-center align-items-center text-uppercase fs-5">
             Flash Info</div>
         <div class="bg-dark col-10 py-2  fs-5 d-flex justify-content-center align-items-center text-uppercase">
             <marquee behavior="" direction="">
@@ -144,7 +144,7 @@
                             href="{{ route('contact') }}">Contact</a>
                     </li>
                 </div>
-                <li class="nav-item rosette-bg-green li-devenir-partenaire">
+                <li class="nav-item bg-youth-color li-devenir-partenaire">
                     <a href="{{ route('mediatheque') }}" class="nav-link text-white fw-bold contaire-partenaire fs-6">
                         Médiathèque  &nbsp; <i class="i-only-web">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"

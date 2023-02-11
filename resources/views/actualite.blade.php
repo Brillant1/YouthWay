@@ -42,37 +42,89 @@
         </div>
     </section>
 
-        <div class="container-fluid d-flex justify-content-center align-items-center mt-5">
-            <div class="row d-flex justify-content-between" style="width: 90%;">
-                @if (sizeof($actualites)>0)
+    <div class="container-fluid d-flex justify-content-center mt-5">
+        <div style="width: 80%;">
+            <div class="row">
+                <div class=" col col-lg-6">
+                    <form action="#" class="row">
+                        <div class="col col-4">
+                            <label for="">Du:</label>
+                            <input type="date" class="py-1 px-2">
+                        </div>
+                        <div class="col col-4">
+                            <label for="">Au:</label>
+                            <input type="date" class="py-1 px-2">
+                        </div>
+                        <input type="submit" class="col col-2 btn bg-youth-color text-white" value="Afficher">
+                    </form>
+                </div>
+                <div class="col col-lg-6">
+                    <div class="row ">
+                        <form action="#">
+                            <span>Trier par: </span> &nbsp;
+                            <select name="" id="" class="px-3 py-1">
+                                <option value="">En cours</option>
+                                <option value="">A venir</option>
+                                <option value="">Passée</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+    <section class=" d-flex justify-content-center">
+        <div class="row" style="width: 80%">
+            @if (sizeof($actualites) > 0)
                 @foreach ($actualites as $actualite)
-
-
-                        <div class=" card mb-3 pt-3 article-section-card ">
-                            <div class="article-section-card-content" id="article-section-card-content">
-                                <div class="" style="height: 250px;">
-                                    <img src="{{ asset('storage/'.$actualite->photo) }}" class="img-fluid rounded-start w-100 h-100 pb-3" alt="..." >
+                    <div class="col-lg-4 col-md-6  col-sm-12  card-container-activity mt-5  ">
+                        <a href="{{ route('actualite-detail', $actualite->id) }}" class="text-dark">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <img src="{{ asset('storage/' . $actualite->photo) }}" class="card-img-top"
+                                        alt="..." style=" height:250px; width:100%; ">
                                 </div>
-                                <div class="">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-bold text-justify actualite-title">{{ $actualite->titre }}</h5>
-                                        <h5 class="card-text py-3 mt-3 text-uppercase actualite-card-text" style="border-top: 1px solid black;"> <span class="font-bold text-uppercase">COÛT</span>: {{ $actualite->cout }}</h5>
-                                        <div class="d-flex justify-content-between align-items-center mt-3 ">
-                                            <p class="py-2 text-lowercase px-3 @if($actualite->statut=="en cours") bg-warning @elseif($actualite->statut=="nouveau") bg-favorite-color @endif rounded-pill text-white fw-bold">{{ $actualite->statut }}</p>
-                                            <a href="{{ route('actualite-detail', $actualite->id) }}" class=" rosette-text-orange lire-article-link">Lire l'article
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                <div class="card-body ps-0">
+                                    <h5 class="card-title font-weight-bold fs-5 rosette-text-orange">
+                                        {{ $actualite->titre }}
+                                    </h5>
+                                    <p class="card-text mt-3 title-activity-content ">{!! Str::substr($actualite->description, 0, 100) . '...' !!}</p>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <p class="font-bold"></p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000688" class="bi bi-calendar2-fill" viewBox="0 0 16 16">
+                                            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM2.545 3h10.91c.3 0 .545.224.545.5v1c0 .276-.244.5-.546.5H2.545C2.245 5 2 4.776 2 4.5v-1c0-.276.244-.5.545-.5z"/>
+                                        </svg>  &nbsp;
+
+
+                                       <span class="youth-color">{{ $actualite->created_at->format('d-m-Y') }}</span> </p>
+                                        <a href="{{ route('actualite-detail', $actualite->id) }}"
+                                            class="youth-colorfont-bold">Voir plus
+
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="#000688" class="bi bi-arrow-right fw-bold" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                                                 </svg>
-                                            </a>
-                                        </div>
+                                            </i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
                 @endforeach
-                @endif
-            </div>
+            @else
+                <div class=" mt-3 pb-4" style="margin-left: 120px;">
+                    <h2>Aucune actualité n'est disponible pour le moment.</h2>
+                </div>
+            @endif
         </div>
+
+
+    </section>
 
         <section >
             <div class="container-fluid mt-5 mb-5 d-flex justify-content-center">
