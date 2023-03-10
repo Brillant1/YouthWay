@@ -156,7 +156,7 @@
                         <div class="card h-100">
                             <span class="actualite-date">
                                 {{ date('d', strtotime($actualite->created_at)) }}<br>{{ date('M', strtotime($actualite->created_at)) }}.<br>{{ date('Y', strtotime($actualite->created_at)) }}</span>
-                            <img src="{{ asset('storage/' . $actualite->photo) }}" class="card-img-top" alt="">
+                            <img src="{{ 'storage/' . $actualite->photo }}" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="actualite-item-link card-title h3-rosette-presentation text-start ">
                                     {{ substr($actualite->titre, 0, 50) }}....

@@ -2,7 +2,7 @@
 
 :root {
     --r-orange: #ff8000;
-    --r-green: #178b01;
+    --r-green: #000688;
 }
 
 @font-face {
@@ -297,6 +297,13 @@ textarea {
     border-bottom-left-radius: 20px;
     background: #fff;
 }
+.welcome-back{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 50px;margin-top: 15px;
+  }
 
 .card-container-activity .card img{
     height: 300px;
@@ -312,6 +319,14 @@ textarea {
 .text-intervention{
     font-size: 1.1rem;
     line-height: 25px;
+}
+.container-activite, .filtre-activite{
+    width: 80% !important;
+}
+@media screen and (max-width:1150px){
+    .container-activite, .filtre-activite{
+        width: 85% !important;
+    }
 }
 
 
@@ -503,6 +518,9 @@ body{
 
     .presentation-title h1 span {
         height: 6px;
+    }
+    .container-activite, .filtre-activite{
+        width: 97% !important;
     }
 
     .atouts {
@@ -849,6 +867,9 @@ a {
     #promoteur-section{
         display: flex;
         flex-direction: column;
+    }
+    .container-activite, .filtre-activite{
+        width: 90% !important;
     }
 }
 

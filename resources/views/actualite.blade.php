@@ -43,7 +43,7 @@
     </section>
 
     <div class="container-fluid d-flex justify-content-center mt-5">
-        <div style="width: 80%;">
+        <div class="filtre-activite">
             <div class="row">
                 <div class=" col col-lg-6">
                     <form action="#" class="row">
@@ -75,7 +75,7 @@
    </div>
 
     <section class=" d-flex justify-content-center">
-        <div class="row" style="width: 80%">
+        <div class="row container-activite">
             @if (sizeof($actualites) > 0)
                 @foreach ($actualites as $actualite)
                     <div class="col-lg-4 col-md-6  col-sm-12  card-container-activity mt-5  ">

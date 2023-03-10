@@ -6,15 +6,24 @@ namespace App\Http\Controllers\Guest;
 
 use Share;
 use App\Models\Domaine;
+use App\Models\Partner;
 use App\Models\Activite;
 use App\Models\Actualite;
 use App\Models\Temoignage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Partner;
+use Illuminate\Support\Facades\Artisan;
 
 class GuestController extends Controller
 {
+
+    public function optimize(){
+        dump(Artisan::call('cache:clear'));
+        dump(Artisan::call('optimize'));
+
+        return "Cache is cleared";
+    }
+
     public function displayAllActualites(){
         $actualites = Actualite::all();
         return view('actualite', compact('actualites'));

@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\Guest\GuestController;
@@ -26,9 +27,15 @@ use App\Http\Controllers\Admin\TemoignageController;
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin/dashboard', function () {
+    return view('admin.home');
+})->middleware(['auth', 'verified'])->name('home');
+
+Route::get('seeder', function(){
+    Artisan::call('db:seed');
+});
+
+Route::get('optimize',[ GuestController::class, 'optimize']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -42,10 +49,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('partenaires', PartnerController::class);
     Route::resource('temoignages', TemoignageController::class);
 
-    Route::get('home', function(){
-        return view('admin.home');
-    })->name('home');
-
+    // Route::get('home', function(){
+    //     return view('admin.home');
+    // })->name('home');
 
     Route::get('/dashboard', function () {
         return view('dashboard');
@@ -79,6 +85,9 @@ Route::get('historique', function(){
     return view('historique');
 })->name('historique');
 
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
 
 Route::get('mediatheque', function(){
     return view('mediatheque');

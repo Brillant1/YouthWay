@@ -37,7 +37,7 @@
                     <li><a href="{{ route('actualites.create') }}">Ajouter actualité</a></li>
                 </ul>
             </li>
-            {{-- <li>
+            <li>
                 <a class="has-arrow" href="{{ route('flashInfos.index') }}" aria-expanded="false">
                     <i class="la la-book"></i>
                     <span class="nav-text">Flash Info</span>
@@ -46,7 +46,7 @@
                     <li><a href="{{ route('flashInfos.index') }}">Les flash info</a></li>
                     <li><a href="{{ route('flashInfos.create') }}">Ajouter flash info</a></li>
                 </ul>
-            </li> --}}
+            </li>
             <li><a class="has-arrow" href="{{ route('medias.index') }}" aria-expanded="false">
                     <i class="la la-building"></i>
                     <span class="nav-text">Médias</span>
